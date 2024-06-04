@@ -26,7 +26,7 @@ launch log out menu with `super + L`
 `rofi`
 `wlogout`
 `brightnessctl`
-`pavucontroll`
+`pavucontrol`
 `waybar`
 `grim`
 `slurp`
