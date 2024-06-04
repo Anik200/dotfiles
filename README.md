@@ -24,7 +24,6 @@ launch log out menu with `super + L`
 # Dependecies
 `Swaybg`
 `rofi`
-`wlogout`
 `brightnessctl`
 `pavucontrol`
 `pamixer`
