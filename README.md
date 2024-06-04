@@ -1,6 +1,7 @@
 # dotfiles
 Hyperdots for my Hyprland Rice
-
+Edited version of https://github.com/prasanthrangan/hyprdots
+every credit goes to github.com/prasanthrangan
 # wallpaper setup
 make sure to edit line `45` in the `hyprland.conf` to your desired default wallpaper & line `72`-`76` in the `config.jsonc` under `~/.config/waybar/` to switch them according to your likings.
 
