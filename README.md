@@ -27,6 +27,7 @@ launch log out menu with `super + L`
 `wlogout`
 `brightnessctl`
 `pavucontrol`
+`pamixer`
 `waybar`
 `grim`
 `slurp`
