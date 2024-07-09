@@ -4,9 +4,9 @@ Hyperdots for my Hyprland Rice
 Edited version of https://github.com/prasanthrangan/hyprdots
 
 every credit goes to [github.com/prasanthrangan](https://github.com/prasanthrangan)
-![image](https://github.com/Anik200/dotfiles/assets/87752958/68c182d0-bc6a-414e-ad24-79702c54f91c)
-![image](https://github.com/Anik200/dotfiles/assets/87752958/3c4d86ec-f56c-4a7e-a2cf-7e216e31ec8f)
-![image](https://github.com/Anik200/dotfiles/assets/87752958/6ddf2715-f67c-46ce-9a86-6553f52a7d4a)
+![image](https://github.com/Anik200/dotfiles/assets/87752958/f1dc3f88-7316-4dcd-8666-b0f937c2774d)
+![image](https://github.com/Anik200/dotfiles/assets/87752958/6a00ca9d-76fc-4182-aae1-c9c3b1f516e8)
+![image](https://github.com/Anik200/dotfiles/assets/87752958/02d1fcef-7b49-4eb2-99f0-f6a96285d142)
 
 
 # wallpaper setup
@@ -23,7 +23,7 @@ launch log out menu with `super + L`
 
 # Dependecies
 `Swaybg`
-`rofi`
+`wofi`
 `brightnessctl`
 `pavucontrol`
 `pamixer`
