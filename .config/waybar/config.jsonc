@@ -6,7 +6,7 @@
     "layer": "top",
     "position": "top",
     "mod": "dock",
-    "height": 31,
+    "height": 10,
     "exclusive": true,
     "passthrough": false,
     "gtk-layer-shell": true,
@@ -15,9 +15,9 @@
 
 // positions generated based on config.ctl //
 
-	"modules-left": ["custom/padd","custom/l_end","custom/power","custom/cliphist","custom/wbar","custom/theme","custom/wallchange","custom/r_end","custom/l_end","wlr/taskbar","custom/spotify","custom/r_end","","custom/padd"],
-	"modules-center": ["custom/padd","custom/l_end","idle_inhibitor","clock","custom/r_end","custom/padd"],
-	"modules-right": ["custom/padd","custom/l_end","tray","battery","custom/r_end","custom/l_end","backlight","network","pulseaudio","pulseaudio#microphone","custom/notifications","custom/keybindhint","custom/r_end","custom/padd"],
+	"modules-left": ["custom/padd","custom/l_end","custom/power","custom/theme","custom/wbar","custom/wallchange","custom/r_end","custom/l_end","custom/spotify","custom/spacer","hyprland/workspaces","custom/spacer","custom/r_end","custom/padd"],
+	"modules-center": ["custom/padd","custom/l_end","clock","custom/r_end","custom/padd"],
+	"modules-right": ["custom/padd","custom/l_end","tray","battery","custom/mouse","custom/r_end","custom/l_end","backlight","network","pulseaudio","pulseaudio#microphone","custom/notifications","custom/r_end","custom/padd"],
 
 
 // sourced from modules based on config.ctl //
@@ -31,6 +31,12 @@
         "interval" : 86400, // once every day
         "tooltip": true
     },
+    
+    "custom/spacer":{
+    "format": " | "},
+    
+    
+  
 
     "custom/cliphist": {
         "format": "{}",
@@ -47,7 +53,7 @@
         "format": "{}", //    //
         "rotate": 0,
         "exec": "echo ; echo  switch bar //  dock",
-        "on-click": "rofi -show drun",
+        "on-click": "wofi --show drun",
         "on-click-right": "wbarconfgen.sh p",
         "on-click-middle": "sleep 0.1 && quickapps.sh kitty firefox spotify code dolphin",
         "interval" : 86400,
@@ -57,8 +63,8 @@
     "custom/theme": {
         "format": "{}",
         "rotate": 0,
-        "exec": "echo ; echo 󰟡 switch theme",
-        "on-click": "themeswitch.sh -n",
+        "exec": "echo ; echo 󰟡 pick color",
+        "on-click": "hyprpicker",
         "on-click-right": "themeswitch.sh -p",
         "on-click-middle": "sleep 0.1 && themeselect.sh",
         "interval" : 86400, // once every day
@@ -69,13 +75,22 @@
         "format": "{}",
         "rotate": 0,
         "exec": "echo ; echo 󰆊 switch wallpaper",
-        "on-click": "swaybg -i /home/anik/Downloads/thunderstorm-sea.png",
-        "on-click-right": "swaybg -i /home/anik/Downloads/wall2.jpg",
-        "on-click-middle": "swaybg -i /home/anik/Downloads/evening-sky.png",
-        "on-scroll-up": "swaybg -i /home/anik/Downloads/tokyo.jpg",
-        "on-scroll-down": "swaybg -i /home/anik/Downloads/train.jpg",
+        "on-click": "swaybg -i /home/anik/Downloads/hypr1.png",
+        "on-click-right": "swaybg -i /home/anik/Downloads/cloud.png",
+        "on-click-middle": "swaybg -i /home/anik/Downloads/hypr3.png",
+        "on-scroll-up": "swaybg -i /home/anik/Downloads/thunderstorm-sea.png",
+        "on-scroll-down": "swaybg -i /home/anik/Downloads/motherboard.png",
         "interval" : 86400, // once every day
         "tooltip": true
+    },
+    "custom/mouse":
+    { 
+            "format": "🖰{}",
+            
+            "on-click": "m8mouse -dpi 1 -led 2 -speed 4",
+        "on-click-right": "m8mouse -dpi 1 -led 4 -speed 4",
+        "on-click-middle": "m8mouse -dpi 1 -led 7 -speed 4",
+        "tooltip": true 
     },
 
 	"wlr/taskbar": {
@@ -298,4 +313,3 @@
     }
 
 }
-
