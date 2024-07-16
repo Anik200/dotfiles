@@ -6,7 +6,9 @@
     "layer": "top",
     "position": "top",
     "mod": "dock",
-    "height": 10,
+    "margin-left": 14,
+  "margin-right": 14,
+  "margin-top": 7,
     "exclusive": true,
     "passthrough": false,
     "gtk-layer-shell": true,
@@ -15,28 +17,37 @@
 
 // positions generated based on config.ctl //
 
-	"modules-left": ["custom/padd","custom/l_end","custom/power","custom/theme","custom/wbar","custom/wallchange","custom/r_end","custom/l_end","custom/spotify","custom/spacer","hyprland/workspaces","custom/spacer","custom/r_end","custom/padd"],
+	"modules-left": ["custom/padd","custom/l_end","custom/power","custom/spacer","custom/wallchange","custom/padd","hyprland/workspaces","custom/r_end","custom/padd"],
 	"modules-center": ["custom/padd","custom/l_end","clock","custom/r_end","custom/padd"],
-	"modules-right": ["custom/padd","custom/l_end","tray","battery","custom/mouse","custom/r_end","custom/l_end","backlight","network","pulseaudio","pulseaudio#microphone","custom/notifications","custom/r_end","custom/padd"],
+	"modules-right": ["custom/padd","custom/l_end","tray","custom/spacer","battery","custom/spacer","backlight","custom/spacer","pulseaudio","custom/r_end","custom/padd"],
 
 
 // sourced from modules based on config.ctl //
 
     "custom/power": {
-        "format": "{}",
+        "format": "{}",
         "rotate": 0,
         "exec": "echo ; echo  logout",
         "on-click": "wlogout",
-        "on-click-right": "logoutlaunch.sh 1",
+        "on-click-right": "hyprctl dispatch exit",
         "interval" : 86400, // once every day
         "tooltip": true
     },
     
     "custom/spacer":{
-    "format": " | "},
+    "format": "|"},
     
     
-  
+ "custom/menu": {
+      "interval": 1,
+      "format": "",  // Icon to display for the button
+      "on-click": "/home/anik/.config/waybar/scripts/popup.py",
+      "separator": false
+},
+
+"hyprland/workspaces": {
+	"format": ""
+},
 
     "custom/cliphist": {
         "format": "{}",
@@ -50,9 +61,9 @@
     },
 
     "custom/wbar": {
-        "format": "{}", //    //
+        "format": "𐌏{}", //    //
         "rotate": 0,
-        "exec": "echo ; echo  switch bar //  dock",
+        "exec": "echo ; echo show app menu",
         "on-click": "wofi --show drun",
         "on-click-right": "wbarconfgen.sh p",
         "on-click-middle": "sleep 0.1 && quickapps.sh kitty firefox spotify code dolphin",
@@ -75,17 +86,17 @@
         "format": "{}",
         "rotate": 0,
         "exec": "echo ; echo 󰆊 switch wallpaper",
-        "on-click": "swaybg -i /home/anik/Downloads/hypr1.png",
-        "on-click-right": "swaybg -i /home/anik/Downloads/cloud.png",
-        "on-click-middle": "swaybg -i /home/anik/Downloads/hypr3.png",
-        "on-scroll-up": "swaybg -i /home/anik/Downloads/thunderstorm-sea.png",
-        "on-scroll-down": "swaybg -i /home/anik/Downloads/motherboard.png",
+        "on-click": "swww img --transition-type grow --transition-pos 0.071,0.988 --transition-step 255 --transition-fps 60 /home/anik/Downloads/gradient2.jpg",
+        "on-click-right": "swww img --transition-type grow --transition-pos 0.071,0.988 --transition-step 255 --transition-fps 60 /home/anik/Downloads/cloud.png",
+        "on-click-middle": "swww img --transition-type grow --transition-pos 0.071,0.988 --transition-step 255 --transition-fps 60 /home/anik/Downloads/gradient.jpg",
+        "on-scroll-up": "swww img --transition-type grow --transition-pos 0.071,0.988 --transition-step 255 --transition-fps 60 /home/anik/Downloads/thunderstorm-sea.png",
+        "on-scroll-down": "swww img --transition-type grow --transition-pos 0.071,0.988 --transition-step 255 --transition-fps 60 /home/anik/Downloads/evening-sky.png",
         "interval" : 86400, // once every day
         "tooltip": true
     },
     "custom/mouse":
     { 
-            "format": "🖰{}",
+            "format": " ◉ ",
             
             "on-click": "m8mouse -dpi 1 -led 2 -speed 4",
         "on-click-right": "m8mouse -dpi 1 -led 4 -speed 4",
@@ -171,31 +182,37 @@
             "warning": 30,
             "critical": 20
         },
-        "format": "{icon} {capacity}%",
+        "format": "{icon}",
         "rotate": 0,
-        "format-charging": " {capacity}%",
-        "format-plugged": " {capacity}%",
-        "format-alt": "{time} {icon}",
-        "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
+        "format-charging": " ",
+        "format-plugged": "",
+        "format-alt": "{time} | {capacity}%",
+        "format-icons": ["","","","",""],  
+        "on-click-right": "pkill waybar & hyprctl dispatch exec waybar",
+      //  "format-icons": ["<i class='fa-solid fa-battery-full'></i>"],
+     // "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
     },
 
     "backlight": {
         "device": "intel_backlight",
         "rotate": 0,
-        "format": "{icon} {percent}%",
+        "format": "{icon}",
+        "format-alt": "{icon} {percent}%",
         "format-icons": ["", "", "", "", "", "", "", "", ""],
+         "on-click-right": "m8mouse -dpi 1 -led 2 -speed 4",
+        "on-click-middle": "m8mouse -dpi 1 -led 7 -speed 4",
         "scroll-step": 1,
         "min-length": 2
     },
 
     "network": {
         "tooltip": true,
-        "format-wifi": " ",
+        "format-wifi": "⇅ ",
         "rotate": 0,
         "format-ethernet": "󰈀 ",
         "tooltip-format": "Network: <big><b>{essid}</b></big>\nSignal strength: <b>{signaldBm}dBm ({signalStrength}%)</b>\nFrequency: <b>{frequency}MHz</b>\nInterface: <b>{ifname}</b>\nIP: <b>{ipaddr}/{cidr}</b>\nGateway: <b>{gwaddr}</b>\nNetmask: <b>{netmask}</b>",
         "format-linked": "󰈀 {ifname} (No IP)",
-        "format-disconnected": "󰖪 ",
+        "format-disconnected": "! ",
         "tooltip-format-disconnected": "Disconnected",
         "format-alt": "<span foreground='#99ffdd'> {bandwidthDownBytes}</span> <span foreground='#ffcc66'> {bandwidthUpBytes}</span>",
         "interval": 2,
@@ -216,7 +233,7 @@
             "phone": "",
             "portable": "",
             "car": "",
-            "default": ["", "", ""]
+         "default": ["", "", ""]
         }
     },
 
@@ -310,6 +327,6 @@
         "format": "  ",
         "interval" : "once",
         "tooltip": false
-    }
+    },
 
 }
