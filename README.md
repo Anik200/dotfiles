@@ -26,10 +26,11 @@ make sure to edit the `hyprland.conf` and set your default terminal emulator as 
 open default terminal with `super + Q`
 open default file manager with `super + E`
 open wofi menu with `super + A`
-launch log out menu with `super + L`
+lock the screen with `super + L`
 
 # Dependecies
 `swww`
+`hyprlock`
 `wofi`
 `brightnessctl`
 `pavucontrol`
