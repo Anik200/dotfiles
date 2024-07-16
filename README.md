@@ -27,7 +27,7 @@ open rofi menu with `super + A`
 launch log out menu with `super + L`
 
 # Dependecies
-`Swaybg`
+`swww`
 `wofi`
 `brightnessctl`
 `pavucontrol`
@@ -35,6 +35,10 @@ launch log out menu with `super + L`
 `waybar`
 `grim`
 `slurp`
-`mako`
+`dunst`
+`wlogout`
+`pulseaudio`
+`pipewire`
+`wireplumber`
 
 
