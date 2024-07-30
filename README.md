@@ -5,9 +5,15 @@ Edited version of https://github.com/prasanthrangan/hyprdots
 
 every credit goes to [github.com/prasanthrangan](https://github.com/prasanthrangan)
 
-![image](https://github.com/user-attachments/assets/73b4bffb-ed0d-4f2d-ba54-4a22e79c5f5d)
-![image](https://github.com/user-attachments/assets/adf0b141-dd77-4607-94be-294bff280453)
-![image](https://github.com/user-attachments/assets/f32c26c6-25dc-4692-ab76-d3ca2be63e51)
+![image](https://github.com/user-attachments/assets/d425dce3-1a20-4a59-8cdb-1f7cb374b749)
+![image](https://github.com/user-attachments/assets/feaf2755-d1a4-44b8-866b-fc078c542690)
+![image](https://github.com/user-attachments/assets/6fa5ab15-2e80-4618-972a-400159d21d8e)
+![image](https://github.com/user-attachments/assets/027e1553-05ef-44dd-8bfd-3d201511156f)
+![image](https://github.com/user-attachments/assets/8b226059-59bd-4958-987c-b6be43ad0e34)
+
+
+
+
 
 
 
@@ -38,7 +44,7 @@ lock the screen with `super + L`
 `waybar`
 `grim`
 `slurp`
-`dunst`
+`SwayNotificationCenter`
 `wlogout`
 `pulseaudio`
 `pipewire`
