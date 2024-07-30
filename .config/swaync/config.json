@@ -1,0 +1,129 @@
+{
+  	"$schema": "/etc/xdg/swaync/configSchema.json",
+  	"positionX": "right",
+  	"positionY": "top",
+  	"layer": "overlay",
+  	"control-center-layer": "top",
+  	"layer-shell": true,
+ 	"cssPriority": "application",
+   
+    "control-center-width": 400,
+    "control-center-height": 600, 
+    "control-center-margin-top": 7,
+    "control-center-margin-bottom": 2,
+    "control-center-margin-right": 7,
+    "control-center-margin-left": 0,
+  	
+    "notification-2fa-action": true,
+  	"notification-inline-replies": false,
+    "notification-window-width": 400,
+    "notification-icon-size": 50,
+    "notification-body-image-height":  160,
+    "notification-body-image-width": 200,
+    
+    "timeout": 6,
+    "timeout-low": 3,
+    "timeout-critical": 0,
+    "fit-to-screen": false,
+    "keyboard-shortcuts": true,
+    "image-visibility": "when available",
+    "transition-time": 200,
+    "hide-on-clear": false,
+    "hide-on-action": true,
+    "script-fail-notify": true,
+    "widgets": [
+        "buttons-grid",
+    	"volume", 
+   	"backlight",
+        "mpris",
+        "dnd",
+        "title",
+        "notifications"
+    ],
+    "widget-config": {
+        "title": {
+            "text": "Notifications",
+            "clear-all-button": true,
+            "button-text": "Clear"
+        },
+        "dnd": {
+            "text": "Do Not Disturb"
+        },
+        "label": {
+            "max-lines":3,
+            "text": "Notification"
+        },
+        "mpris": {
+            "image-size": 60,
+            "image-radius": 10
+        },
+        "volume": {
+            "label": "󰕾"
+        },
+        "backlight": {
+            "label": "󰃟"
+        },
+        "buttons-grid": {
+            "actions": [
+                {
+                    "label": "󰕾",
+                    "command": "pavucontrol"
+        
+                },
+                {
+                    "label": "󰂯",
+                    "command": "blueman-manager"
+                },
+                {
+                    "label": "󰐥",
+                    "command": "hyprctl dispatch exit"
+                },
+                {
+                    "label": "",
+                    "command": "m8mouse -dpi 1 -led 2 -speed 4"
+                },
+                {
+                    "label": "",
+                    "command": "m8mouse -dpi 1 -led 7 -speed 4"
+                },
+                {
+                    "label": "1",
+                    "command": "swww img --transition-type grow --transition-pos 0.071,0.988 --transition-step 255 --transition-fps 60 /home/anik/Downloads/skyway.jpg"
+                },
+                {
+                    "label": "2",
+                    "command": "swww img --transition-type grow --transition-pos 0.071,0.988 --transition-step 255 --transition-fps 60 /home/anik/Downloads/cloud.png"
+                },
+                {
+                    "label": "3",
+                    "command": "swww img --transition-type grow --transition-pos 0.071,0.988 --transition-step 255 --transition-fps 60 /home/anik/Downloads/gradient.jpg"
+                },
+                {
+                    "label": "4",
+                    "command": "swww img --transition-type grow --transition-pos 0.071,0.988 --transition-step 255 --transition-fps 60 /home/anik/Downloads/torvalds.png"
+                },
+                {
+                    "label": "5",
+                    "command": "swww img --transition-type grow --transition-pos 0.071,0.988 --transition-step 255 --transition-fps 60 /home/anik/Downloads/night.png"
+                },
+                {
+                    "label": "6",
+                    "command": "swww img --transition-type grow --transition-pos 0.071,0.988 --transition-step 255 --transition-fps 60 /home/anik/Downloads/chill.gif"
+                },
+                {
+                    "label": "7",
+                    "command": "swww img --transition-type grow --transition-pos 0.071,0.988 --transition-step 255 --transition-fps 60 /home/anik/Downloads/YOO.png"
+                },
+                {
+                "label": "", 
+                "command": "pkill gammastep"
+                },
+                {
+                "label": "",
+                "command": "gammastep -O 4500"
+                }
+                
+            ]
+        }
+    }
+}
