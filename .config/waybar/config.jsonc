@@ -6,9 +6,9 @@
     "layer": "top",
     "position": "top",
     "mod": "dock",
-    "margin-left": 14,
-  "margin-right": 14,
-  "margin-top": 7,
+    "margin-left": 11,
+  "margin-right": 11,
+  "margin-top": 9,
     "exclusive": true,
     "passthrough": false,
     "gtk-layer-shell": true,
@@ -17,13 +17,36 @@
 
 // positions generated based on config.ctl //
 
-	"modules-left": ["custom/padd","custom/l_end","custom/power","custom/spacer","custom/wallchange","custom/padd","hyprland/workspaces","custom/r_end","custom/padd"],
+	"modules-left": ["custom/spacer","hyprland/workspaces","custom/padd","custom/r_end","custom/padd"],
 	"modules-center": ["custom/padd","custom/l_end","clock","custom/r_end","custom/padd"],
-	"modules-right": ["custom/padd","custom/l_end","tray","custom/spacer","battery","custom/spacer","backlight","custom/spacer","pulseaudio","custom/r_end","custom/padd"],
+	"modules-right": ["custom/padd","custom/l_end","tray","battery","custom/notification","custom/r_end","custom/padd"],
 
 
 // sourced from modules based on config.ctl //
 
+
+"custom/notification": {
+    "tooltip": false,
+    "format": "{icon}",
+    "format-icons": {
+      "notification": "<span foreground='red'><sup></sup></span>",
+      "none": "  ",
+      "dnd-notification": "<span foreground='red'><sup></sup></span>",
+      "dnd-none": "",
+      "inhibited-notification": "<span foreground='red'><sup></sup></span>",
+      "inhibited-none": "",
+      "dnd-inhibited-notification": "<span foreground='red'><sup></sup></span>",
+      "dnd-inhibited-none": ""
+    },
+    "return-type": "json",
+    "exec-if": "which swaync-client",
+    "exec": "swaync-client -swb",
+    "on-click": "swaync-client -t -sw",
+    "on-click-right": "swaync-client -d -sw",
+    "escape": true
+  },
+  
+  
     "custom/power": {
         "format": "{}",
         "rotate": 0,
@@ -46,8 +69,40 @@
 },
 
 "hyprland/workspaces": {
-	"format": ""
+	//"format": "" ⚫
+	"format": "{icon}",
+	"format-icons": {
+	"active": "",
+	"default": "●"
+	},
 },
+"cava": {
+       "cava_config": "~/.config/cava/config",
+      "framerate": 60,
+      "autosens": 1,
+      "bars": 14,
+      "lower_cutoff_freq": 50,
+      "higher_cutoff_freq": 10000,
+      "method": "pulse",
+      "source": "auto",
+      "stereo": true,
+      "reverse": false,
+      "bar_delimiter": 0,
+      "monstercat": false,
+      "waves": false,
+      "noise_reduction": 0.77,
+      "input_delay": 2,
+      "format-icons" : ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█" ],
+      "actions": {
+                 "on-click-right": "mode"
+                 }
+    },
+    
+    "custom/script": {
+    "on-click": "~/.config/waybar/volume.sh toggle",
+    "format": "",
+    
+    },
 
     "custom/cliphist": {
         "format": "{}",
@@ -86,11 +141,11 @@
         "format": "{}",
         "rotate": 0,
         "exec": "echo ; echo 󰆊 switch wallpaper",
-        "on-click": "swww img --transition-type grow --transition-pos 0.071,0.988 --transition-step 255 --transition-fps 60 /home/anik/Downloads/gradient2.jpg",
+       "on-click": "swww img --transition-type grow --transition-pos 0.071,0.988 --transition-step 255 --transition-fps 60 /home/anik/Downloads/skyway.jpg",
         "on-click-right": "swww img --transition-type grow --transition-pos 0.071,0.988 --transition-step 255 --transition-fps 60 /home/anik/Downloads/cloud.png",
         "on-click-middle": "swww img --transition-type grow --transition-pos 0.071,0.988 --transition-step 255 --transition-fps 60 /home/anik/Downloads/gradient.jpg",
-        "on-scroll-up": "swww img --transition-type grow --transition-pos 0.071,0.988 --transition-step 255 --transition-fps 60 /home/anik/Downloads/thunderstorm-sea.png",
-        "on-scroll-down": "swww img --transition-type grow --transition-pos 0.071,0.988 --transition-step 255 --transition-fps 60 /home/anik/Downloads/evening-sky.png",
+        "on-scroll-up": "swww img --transition-type grow --transition-pos 0.071,0.988 --transition-step 255 --transition-fps 60 /home/anik/Downloads/torvalds.png",
+        "on-scroll-down": "swww img --transition-type grow --transition-pos 0.071,0.988 --transition-step 255 --transition-fps 60 /home/anik/Downloads/night.png",
         "interval" : 86400, // once every day
         "tooltip": true
     },
@@ -171,7 +226,7 @@
     },
 
     "tray": {
-        "icon-size": 18,
+        "icon-size": 19,
         "rotate": 0,
         "spacing": 5
     },
@@ -219,10 +274,11 @@
     },
 
     "pulseaudio": {
-        "format": "{icon} {volume}",
+        "format": "{icon}",
+        "format-alt": "{icon} {volume}",
         "rotate": 0,
         "format-muted": "婢",
-        "on-click": "pavucontrol",
+        "on-click-right": "pavucontrol",
         "on-click-middle": "volumecontrol.sh -o m",
         "tooltip-format": "{icon} {desc} // {volume}%",
         "scroll-step": 5,
@@ -283,7 +339,12 @@
         "rotate": 0,
         "on-click": "keybinds_hint.sh"
     },
-
+    
+"custom/expand": {
+        "on-click":"~/.config/hypr/scripts/expand_toolbar",
+        "format":"{}",
+        "exec":"~/.config/hypr/scripts/tools/expand arrow-icon"
+    },
 
 // modules for padding //
 
