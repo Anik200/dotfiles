@@ -7,21 +7,21 @@
   	"layer-shell": true,
  	"cssPriority": "application",
    
-    "control-center-width": 400,
-    "control-center-height": 600, 
-    "control-center-margin-top": 7,
+    "control-center-width": 190,
+    "control-center-height": 320, 
+    "control-center-margin-top": 5,
     "control-center-margin-bottom": 2,
-    "control-center-margin-right": 7,
+    "control-center-margin-right": 5,
     "control-center-margin-left": 0,
   	
     "notification-2fa-action": true,
   	"notification-inline-replies": false,
     "notification-window-width": 400,
-    "notification-icon-size": 50,
+    "notification-icon-size": 30,
     "notification-body-image-height":  160,
     "notification-body-image-width": 200,
     
-    "timeout": 6,
+    "timeout": 3,
     "timeout-low": 3,
     "timeout-critical": 0,
     "fit-to-screen": false,
@@ -32,19 +32,17 @@
     "hide-on-action": true,
     "script-fail-notify": true,
     "widgets": [
-        "buttons-grid",
     	"volume", 
    	"backlight",
         "mpris",
-        "dnd",
-        "title",
-        "notifications"
+        "network",
+        "buttons-grid"
     ],
     "widget-config": {
         "title": {
-            "text": "Notifications",
+            "text": "",
             "clear-all-button": true,
-            "button-text": "Clear"
+            "button-text": "-"
         },
         "dnd": {
             "text": "Do Not Disturb"
@@ -54,7 +52,7 @@
             "text": "Notification"
         },
         "mpris": {
-            "image-size": 60,
+            "image-size": 30,
             "image-radius": 10
         },
         "volume": {
@@ -71,10 +69,6 @@
         
                 },
                 {
-                    "label": "󰂯",
-                    "command": "blueman-manager"
-                },
-                {
                     "label": "󰐥",
                     "command": "hyprctl dispatch exit"
                 },
@@ -87,42 +81,17 @@
                     "command": "m8mouse -dpi 1 -led 7 -speed 4"
                 },
                 {
-                    "label": "1",
-                    "command": "swww img --transition-type grow --transition-pos 0.071,0.988 --transition-step 255 --transition-fps 60 /home/anik/Downloads/skyway.jpg"
-                },
-                {
-                    "label": "2",
-                    "command": "swww img --transition-type grow --transition-pos 0.071,0.988 --transition-step 255 --transition-fps 60 /home/anik/Downloads/cloud.png"
-                },
-                {
-                    "label": "3",
-                    "command": "swww img --transition-type grow --transition-pos 0.071,0.988 --transition-step 255 --transition-fps 60 /home/anik/Downloads/gradient.jpg"
-                },
-                {
-                    "label": "4",
-                    "command": "swww img --transition-type grow --transition-pos 0.071,0.988 --transition-step 255 --transition-fps 60 /home/anik/Downloads/torvalds.png"
-                },
-                {
-                    "label": "5",
-                    "command": "swww img --transition-type grow --transition-pos 0.071,0.988 --transition-step 255 --transition-fps 60 /home/anik/Downloads/night.png"
-                },
-                {
-                    "label": "6",
-                    "command": "swww img --transition-type grow --transition-pos 0.071,0.988 --transition-step 255 --transition-fps 60 /home/anik/Downloads/chill.gif"
-                },
-                {
-                    "label": "7",
-                    "command": "swww img --transition-type grow --transition-pos 0.071,0.988 --transition-step 255 --transition-fps 60 /home/anik/Downloads/YOO.png"
-                },
-                {
                 "label": "", 
                 "command": "pkill gammastep"
                 },
                 {
                 "label": "",
                 "command": "gammastep -O 4500"
+                },
+                {
+                    "label": "󰆊",
+                    "command": "waypaper"
                 }
-                
             ]
         }
     }
