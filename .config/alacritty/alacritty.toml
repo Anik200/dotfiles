@@ -1,7 +1,7 @@
 
-window.padding.x = 14
+window.padding.x = 12
 window.padding.y = 12
-window.opacity= 0.9
+window.opacity= 0.99
 import = [
     "~/.config/alacritty/themes/themes/{theme}.toml"
 ]
@@ -9,7 +9,7 @@ import = [
 # author tonsky
 
 [colors.primary]  
-background = '#161320'
+background = '#0E1E24'
 foreground = '#CECECE'
 
 [colors.cursor]
@@ -18,6 +18,7 @@ cursor = '#CECECE'
 
 [cursor]
 style = 'beam'
+unfocused_hollow = false
 
 
 
