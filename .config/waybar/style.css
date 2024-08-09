@@ -1,5 +1,5 @@
 * {
-    font-family: "JetBrainsMono Nerd Font";
+    font-family: "JetBrains Mono Nerd Font";
     /*font-family: "JetBrainsMono Nerd Font";*/
     font-weight: bold; 
     font-size: 13px;
@@ -14,33 +14,36 @@
 }
 
 window#waybar {
-   background: rgba(22, 19, 32, 1);
-    border-radius: 15px;
-   border: 2px solid #82A8C9;
+   background: #171717;
+    border-radius: 20px;
+   border: 2px solid #124323;
 }
 
 tooltip {
-    background: #24273A;
+    background: #171717;
     color: @main-fg;
     border-radius: 7px;
    border: 2px solid #CBA6F7;
    
 
 }
+#workspaces{
 
+}
 #workspaces button {
-background: rgba(22, 19, 32, 0.0);
+background: #171717;
     color: #888789;
     box-shadow: none;
 	text-shadow: none;
     border-radius: 9px;
     transition: 0.8s ease;
     padding: 0px;
-    margin-left: 3px;
-    margin-bottom: 0px;
+    margin-left: 1px;
+    margin-bottom: 3px;
+    margin-top: 3px;
     padding-left: 1px;
     padding-right: 1px;
-    margin-right: 3px;
+    margin-right: 1px;
    /* animation: ws_normal 20s ease-in-out 1; */
 }
 
@@ -48,15 +51,15 @@ background: rgba(22, 19, 32, 0.0);
 
 #workspaces button.active {
 
-   background: none;
-   /*background-image: url("/home/anik/Downloads/bar1.png");*/
+ 
+  padding: 0;
+  /* background-image: url("/home/anik/Documents/bar1.png");*/
     color: #D6D5D8;  
-    border-radius: 20px;
     transition: all 0.3s ease;
-    margin-left: 3px;
-    padding-left: 1px;
-    padding-right: 1px;
-    margin-right: 3px;
+    margin-left: 1px;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-right: 1px;
   /*  transition: all 0.4s cubic-bezier(.55,0.68,.48,1.682); */
   
 }
@@ -106,6 +109,7 @@ background: rgba(22, 19, 32, 0.0);
 #tray menu * {
     min-height: 16px;
     font-weight: normal;
+    color: #c8a1cf;
 }
 
 #tray menu separator {
@@ -163,16 +167,17 @@ background:  #161320;
  
 }
 #battery{
-    font-weight: normal;
-    font-size: 15px;
+    font-weight: bold;
+    font-size: 14px;
     color: #FFFFFF;
-    background:  rgba(22, 19, 32, 0.9);
+    background:  #171717;
     opacity: 1;
     margin: 6px 0px 6px 0px;
     padding-left: 4px;
     padding-right: 4px;
  
 }
+
 #idle_inhibitor{
 color: #24966e;
 background: @bar-bg;
@@ -184,9 +189,12 @@ background: @bar-bg;
 }
 #clock{
     color: #FFFFFF;
-    background:  rgba(22, 19, 32, 0.9);
+    font-size: 14px;
+    font-weight: bold;
+    font-family: "JetBrains Mono Nerd Font";
+    background: #171717;
     opacity: 1;
-    margin: 6px 0px 6px 0px;
+    margin: 3px 0px 3px 0px;
     padding-left: 10px;
     padding-right: 10px;
     border: none;
@@ -218,7 +226,6 @@ color: #E6E7E7;
 #custom-wallchange,
 #custom-wbar,
 #window,
-#workspaces,
 #custom-l_end,
 #custom-r_end,
 #custom-sl_end,
@@ -227,8 +234,8 @@ color: #E6E7E7;
 #cava,
 #custom-rr_end {
 font-weight: normal;
-    color: #E6E7E7;
-    background:  rgba(22, 19, 32, 0.9);
+    color: #c8a1cf;
+    background:  #171717;
     opacity: 1;
     margin: 6px 0px 6px 0px;
     padding-left: 4px;
@@ -237,7 +244,7 @@ font-weight: normal;
     
 }
 #battery.charging, #battery.plugged {
-	color: #50bf28;
+	color: #77e093;
 }
 
 #battery.critical:not(.charging) {
@@ -256,7 +263,7 @@ font-weight: normal;
 }
 
 
-#workspaces,
+
 #taskbar {
     padding: 1px;
 }
