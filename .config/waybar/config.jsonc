@@ -18,8 +18,8 @@
 // positions generated based on config.ctl //
 
 	"modules-left": ["custom/spacer","hyprland/workspaces","custom/padd","custom/r_end","custom/padd"],
-	"modules-center": ["custom/padd","custom/l_end","clock","custom/r_end","custom/padd"],
-	"modules-right": ["custom/padd","custom/l_end","tray","battery","custom/notification","custom/r_end","custom/padd"],
+	"modules-center": ["custom/padd","custom/l_end","custom/r_end","hyprland/window","custom/padd"],
+	"modules-right": ["custom/padd","custom/l_end","tray","battery","clock","custom/notification","custom/padd"],
 
 
 // sourced from modules based on config.ctl //
@@ -29,7 +29,7 @@
     "tooltip": false,
     "format": "{icon}",
     "format-icons": {
-      "notification": "<span foreground='red'><sup></sup></span>",
+      "notification": " <span foreground='red'><sup></sup></span> ",
       "none": "  ",
       "dnd-notification": "<span foreground='red'><sup></sup></span>",
       "dnd-none": "",
@@ -48,12 +48,10 @@
   
   
     "custom/power": {
-        "format": "{}",
+        "format": "@{}",
         "rotate": 0,
-        "exec": "echo ; echo  logout",
-        "on-click": "wlogout",
-        "on-click-right": "hyprctl dispatch exit",
-        "interval" : 86400, // once every day
+        "on-click": "ags -t ControlPanel",
+        "on-click-right": "pkill ags",
         "tooltip": true
     },
     
@@ -69,9 +67,9 @@
 },
 
 "hyprland/workspaces": {
-	//"format": "" ⚫
 	"format": "{icon}",
 	"format-icons": {
+	//"active": "",
 	"active": "",
 	"default": "●"
 	},
@@ -151,7 +149,8 @@
     },
     "custom/mouse":
     { 
-            "format": " ◉ ",
+            "format": "",
+            "format-alt": "",
             
             "on-click": "m8mouse -dpi 1 -led 2 -speed 4",
         "on-click-right": "m8mouse -dpi 1 -led 4 -speed 4",
@@ -226,9 +225,9 @@
     },
 
     "tray": {
-        "icon-size": 19,
+        "icon-size": 16,
         "rotate": 0,
-        "spacing": 5
+        "spacing": 3
     },
 
     "battery": {
@@ -239,13 +238,14 @@
         },
         "format": "{icon}",
         "rotate": 0,
-        "format-charging": " ",
-        "format-plugged": "",
+        "format-charging": "",
+        "format-plugged": "",
         "format-alt": "{time} | {capacity}%",
-        "format-icons": ["","","","",""],  
+       //"format-icons": ["","","","",""],  
+         "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
         "on-click-right": "pkill waybar & hyprctl dispatch exec waybar",
       //  "format-icons": ["<i class='fa-solid fa-battery-full'></i>"],
-     // "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
+    
     },
 
     "backlight": {
