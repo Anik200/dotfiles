@@ -12,9 +12,9 @@
 }
 .control-center {
 padding: 20px;
-  background: alpha(rgb(22, 19, 32), 0.7);
+  background: #171717;
   border-radius: 20px 20px 20px 20px;
-  border: 4px solid #E586B1;
+  border: 2px solid #124323;
   margin: 2px;
 }
 
@@ -35,6 +35,8 @@ padding: 20px;
 
 /* Title widget */
 .widget-title {
+font-family: "JetBrains Mono Nerd Font";
+font-weight: bold;
   margin: 8px;
   font-size: 1.5rem;
 }
@@ -42,8 +44,8 @@ padding: 20px;
   font-size: initial;
   color: white;
   text-shadow: none;
-  background:  #3c3836;
-  border: 1px solid @noti-border-color;
+  background:  #0c0817;
+  border: 1px solid #04030a;
   box-shadow: none;
   border-radius: 12px;
 }
@@ -82,6 +84,7 @@ padding: 20px;
 
 /* Mpris widget */
 .widget-mpris {
+font-family: "JetBrains Mono Nerd Font";
   /* The parent to all players */
 }
 .widget-mpris-player {
@@ -89,7 +92,7 @@ padding: 20px;
   margin: 14px;
   background-color: @mpris-album-art-overlay;
   border-radius: 20px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 1);
 }
 .widget-mpris-album-art {
   border-radius: 12px;
@@ -106,10 +109,12 @@ padding: 20px;
   /* Change player side buttions insensitive */
 }
 .widget-mpris-title {
+font-family: "JetBrains Mono Nerd Font";
   font-weight: bold;
   font-size: 1.25rem;
 }
 .widget-mpris-subtitle {
+font-family: "JetBrains Mono Nerd Font";
   font-size: 1.1rem;
 }
 /*imp1 */
@@ -117,24 +122,25 @@ padding: 20px;
 .widget-buttons-grid {
  /* height: 30px; */
  font-size: 20px;  
-  /* padding: 1; */
-  margin: 1px;
+ font-family: "JetBrains Mono Nerd Font";
+   padding-left: 5px; 
+  margin-left: -7px;
+  margin-right: -7px;
   border-radius: 20px;
   background-color:  transparent;
 }
 
 .widget-buttons-grid>flowbox>flowboxchild>button{
-  padding: 12px;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  margin: 5px;
-  background:  #48506E;
+  padding: 9px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  background:  #242424;
   border-radius: 10px;
-  border: 0px solid #28282b;
+  border: 1px solid #04030a;
 }
 
 .widget-buttons-grid>flowbox>flowboxchild>button:hover {
-  background:  #7F4B6E;
+  background:  #C6E58E;
 }
 
 /* Menubar widget */
@@ -152,21 +158,51 @@ padding: 20px;
 }
 
 /* Volume widget */
+trough{
+border-radius: 20px;
+background: #171717;
+border: 3px solid #171717;
+}
+
+trough highlight { /* ´trough´ is the background of the slider, ´highlight´ is the actual slider */
+    padding-top: 24px;
+    background: #49A0E6;
+    border: 0px solid #02080d;
+    border-radius: 20px;
+}
+
+trough slider {
+    padding: 4px;
+    background: #49A0E6;
+    border: 2px solid #02080d;
+}
+trough slider:hover {
+    padding: 4px;
+    background: #FFFFFF;
+    border: 2px solid #02080d;
+}
 
 .widget-volume {
-  background-color: transparent;
-  font-size: 20px;
-  padding: 2px;
-  margin: 4px;
-  border-radius: 0px;
+  background-color: #242424;
+  border-radius: 20px 20px 0px 0px;
+  font-size: 25px;
+  padding-left: 15px;
+  margin-left: -10px;
+   margin-right: -10px;
+  margin-top: -10px;
   border: 0px solid #28282b;
 }
+
+
+
 .widget-backlight {
-font-size: 20px;
-  background-color:  transparent;
-  padding: 2px;
-  margin: 4px;
-  border-radius: 12px;
+padding-left: 15px;
+background-color: #242424;
+  font-size: 25px;
+  margin-left: -10px;
+   margin-right: -10px;
+   margin-top: -15px;
+  border-radius: 0px 0px 20px 20px;
   border: 0px solid #28282b;
 }
 
