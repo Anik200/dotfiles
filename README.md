@@ -44,6 +44,7 @@ lock the screen with `super + L`
 
 # Dependecies
 `swww`
+`waypaper`
 `hyprlock`
 `wofi`
 `brightnessctl`
