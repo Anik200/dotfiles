@@ -4,6 +4,8 @@ Hyperdots for my Hyprland Rice
 Edited version of https://github.com/prasanthrangan/hyprdots
 
 every credit goes to [github.com/prasanthrangan](https://github.com/prasanthrangan)
+# AGS config
+prefer to https://github.com/mewoocat/NixOS and the `ags-overhaul` branch for the ags configs
 
 ![image](https://github.com/user-attachments/assets/61a640ee-27f9-44c0-8a9a-11db9a003026)
 ![image](https://github.com/user-attachments/assets/cf15cc3e-f8bc-4c3c-9b67-d15aace8607a)
