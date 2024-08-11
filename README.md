@@ -5,11 +5,11 @@ Edited version of https://github.com/prasanthrangan/hyprdots
 
 every credit goes to [github.com/prasanthrangan](https://github.com/prasanthrangan)
 
-![image](https://github.com/user-attachments/assets/d425dce3-1a20-4a59-8cdb-1f7cb374b749)
-![image](https://github.com/user-attachments/assets/feaf2755-d1a4-44b8-866b-fc078c542690)
-![image](https://github.com/user-attachments/assets/6fa5ab15-2e80-4618-972a-400159d21d8e)
-![image](https://github.com/user-attachments/assets/027e1553-05ef-44dd-8bfd-3d201511156f)
-![image](https://github.com/user-attachments/assets/8b226059-59bd-4958-987c-b6be43ad0e34)
+![image](https://github.com/user-attachments/assets/61a640ee-27f9-44c0-8a9a-11db9a003026)
+![image](https://github.com/user-attachments/assets/cf15cc3e-f8bc-4c3c-9b67-d15aace8607a)
+![image](https://github.com/user-attachments/assets/0d8cfd1d-312f-4f53-8c07-ed82cc19583f)
+![image](https://github.com/user-attachments/assets/f2bf736d-ca19-4ad2-a091-fe782a6053d8)
+
 
 
 
