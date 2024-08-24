@@ -8,7 +8,8 @@
     "mod": "dock",
     "margin-left": 11,
   "margin-right": 11,
-  "margin-top": 9,
+  "margin-top": 7,
+  "margin-bottom": -4,
     "exclusive": true,
     "passthrough": false,
     "gtk-layer-shell": true,
@@ -41,11 +42,15 @@
     "return-type": "json",
     "exec-if": "which swaync-client",
     "exec": "swaync-client -swb",
-    "on-click": "swaync-client -t -sw",
+    "on-click-middle": "swaync-client -t -sw",
     "on-click-right": "swaync-client -d -sw",
+    "on-click": "/usr/local/bin/ags -t ControlPanel",
     "escape": true
   },
   
+  "hyprland/window":{
+  "format": "{}"
+  },
   
     "custom/power": {
         "format": "@{}",
@@ -202,7 +207,7 @@
     "clock": {
         "format": "{:%I:%M %p}",
         "rotate": 0,
-        "format-alt": "{:%R 󰃭 %d·%m·%y}",
+       "on-click": "/usr/local/bin/ags -t ActivityCenter",
         "tooltip-format": "<tt>{calendar}</tt>",
         "calendar": {
             "mode": "month",
@@ -240,9 +245,9 @@
         "rotate": 0,
         "format-charging": "",
         "format-plugged": "",
-        "format-alt": "{time} | {capacity}%",
-       //"format-icons": ["","","","",""],  
-         "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
+        "format-alt": "<span weight='bold' color='#c2864a'>{time} <span weight='bold' color='white'>| <span weight='bold' color='#82d457'>{capacity}%</span></span></span>",
+       "format-icons": ["","","","",""],  
+         //"format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
         "on-click-right": "pkill waybar & hyprctl dispatch exec waybar",
       //  "format-icons": ["<i class='fa-solid fa-battery-full'></i>"],
     
