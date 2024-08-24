@@ -1,9 +1,6 @@
 # dotfiles
 Hyperdots for my Hyprland Rice
 
-Edited version of https://github.com/prasanthrangan/hyprdots
-
-every credit goes to [github.com/prasanthrangan](https://github.com/prasanthrangan)
 # AGS config
 prefer to https://github.com/mewoocat/NixOS and the `ags-overhaul` branch for the ags configs
 
