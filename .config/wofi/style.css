@@ -1,69 +1,42 @@
-*{
-font-family: "JetBrainsMono Nerd Font";
-min-height: 0;
-font-size: 100%;
-font-feature-settings: '"zero", "ss01", "ss02", "ss03", "ss04", "ss05", "cv31"';
-padding: 0px;
-margin-top: 1px;
-margin-bottom: 1px;
+window {
+  background-color: rgba(23, 23, 23, 0.7);
 }
 
-
-#window {
-	/*background-color: --wofi-color0;*/
-	background-color: rgba(26, 27, 38, 0.5);
-	color: --wofi-color2;
-	/*border: 2px solid --wofi-color1;*/
-	border-radius: 0px;
-}
-
-#outer-box {
-	padding: 20px;
-}
-
-#input {
-	background-color: --wofi-color1;
-	/*border: 1px solid --wofi-color3;*/
-	padding: 8px 12px;
+* {
+  font-family: "JetBrains Mono Nerd Font";
+  font-size: 14px;
+  color: #fff;
 }
 
 #scroll {
-	margin-top: 20px;
-	margin-bottom: 20px;
+  padding: 0.5rem;
+}
+
+#input {
+  background-color: rgba(23, 23, 23, 0.7);
+  outline: none;
+  box-shadow: none;
+  border: 0;
+  border-radius: 0;
+  font-size: 1rem;
+  padding: 0.5rem;
 }
 
 #inner-box {
+  margin: 0.5rem;
+  font-size: 1rem;
 }
 
 #img {
-	padding-right: 10px;
-}
-
-#text {
-	color: --wofi-color2;
-}
-
-#text:selected {
-	color: #0F0F0F;  /*--wofi-color0*/
+  margin: 10px 10px;
 }
 
 #entry {
-	padding: 6px;
+  border-radius: 0.5rem;
 }
 
 #entry:selected {
-	background-color: --wofi-color3;
-	background: linear-gradient(90deg, #668D99, #668D99);
-	color: --wofi-color0;
-}
-
-#unselected {
-}
-
-#selected {
-}
-
-#input, #entry:selected {
-	border-radius: 8px;
-	border: 1px solid #668D99;
-}
+  background-color: rgba(23, 23, 23, 0.7);
+  outline: none;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}s
