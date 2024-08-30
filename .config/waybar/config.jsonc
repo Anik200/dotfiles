@@ -9,7 +9,7 @@
     "margin-left": 11,
   "margin-right": 11,
   "margin-top": 7,
-  "margin-bottom": -4,
+ "margin-bottom": -4,
     "exclusive": true,
     "passthrough": false,
     "gtk-layer-shell": true,
@@ -18,20 +18,43 @@
 
 // positions generated based on config.ctl //
 
-	"modules-left": ["custom/spacer","hyprland/workspaces","custom/padd","custom/r_end","custom/padd"],
+	"modules-left": ["custom/spacer","hyprland/workspaces"],
 	"modules-center": ["custom/padd","custom/l_end","custom/r_end","hyprland/window","custom/padd"],
-	"modules-right": ["custom/padd","custom/l_end","tray","battery","clock","custom/notification","custom/padd"],
+	"modules-right": ["custom/padd","custom/l_end","group/expand","custom/spacer","network","battery","clock","custom/notification","custom/padd"],
 
 
 // sourced from modules based on config.ctl //
 
 
+
+"tray": {
+        "icon-size": 16,
+        "rotate": 0,
+        "spacing": 3
+    },
+
+   "group/expand": {
+     "orientation": "horizontal",
+     "drawer": {
+         "transition-duration": 100,
+         "children-class": "not-power",
+       "transition-left-to-right": true,
+         "click-to-reveal": true
+     },
+     "modules": ["custom/menu","tray"]
+   },
+
+ "custom/menu":{
+ "format": "",
+ },
+ 
+
 "custom/notification": {
     "tooltip": false,
     "format": "{icon}",
     "format-icons": {
-      "notification": " <span foreground='red'><sup></sup></span> ",
-      "none": "  ",
+      "notification": "<span foreground='red'><sup></sup></span>",
+      "none": "",
       "dnd-notification": "<span foreground='red'><sup></sup></span>",
       "dnd-none": "",
       "inhibited-notification": "<span foreground='red'><sup></sup></span>",
@@ -42,16 +65,17 @@
     "return-type": "json",
     "exec-if": "which swaync-client",
     "exec": "swaync-client -swb",
-    "on-click-middle": "swaync-client -t -sw",
     "on-click-right": "swaync-client -d -sw",
-    "on-click": "/usr/local/bin/ags -t ControlPanel",
+    "on-click": "swaync-client -t -sw",
     "escape": true
   },
   
-  "hyprland/window":{
-  "format": "{}"
-  },
-  
+  "hyprland/window": {  
+//"format": "{}"   // <--- these is the default value  
+"format": "<span  weight='bold' >{}</span>",
+ "max-length": 13
+},
+
     "custom/power": {
         "format": "@{}",
         "rotate": 0,
@@ -61,24 +85,27 @@
     },
     
     "custom/spacer":{
-    "format": "|"},
+    "format": "|"
+    },
     
     
- "custom/menu": {
-      "interval": 1,
-      "format": "",  // Icon to display for the button
-      "on-click": "/home/anik/.config/waybar/scripts/popup.py",
-      "separator": false
-},
+  
+  "hyprland/workspaces": {
+    "format": "{}"
+    },
 
-"hyprland/workspaces": {
-	"format": "{icon}",
-	"format-icons": {
+
+    
+    
+//"hyprland/workspaces": {
+	//"format": "{icon}",
+	//"format-icons": {
 	//"active": "",
-	"active": "",
-	"default": "●"
-	},
-},
+	//"active": "",
+	//"default": "○",
+	//"default": "●"
+	//},
+//},
 "cava": {
        "cava_config": "~/.config/cava/config",
       "framerate": 60,
@@ -229,11 +256,6 @@
         }
     },
 
-    "tray": {
-        "icon-size": 16,
-        "rotate": 0,
-        "spacing": 3
-    },
 
     "battery": {
         "states": {
@@ -243,13 +265,13 @@
         },
         "format": "{icon}",
         "rotate": 0,
-        "format-charging": "",
-        "format-plugged": "",
+        "format-charging": "",
+        "format-plugged": "",
         "format-alt": "<span weight='bold' color='#c2864a'>{time} <span weight='bold' color='white'>| <span weight='bold' color='#82d457'>{capacity}%</span></span></span>",
        "format-icons": ["","","","",""],  
-         //"format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
+       //"format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
         "on-click-right": "pkill waybar & hyprctl dispatch exec waybar",
-      //  "format-icons": ["<i class='fa-solid fa-battery-full'></i>"],
+      //  "format-icons": [<i class='fa-solid fa-wifi-slash'></i>],
     
     },
 
@@ -267,14 +289,15 @@
 
     "network": {
         "tooltip": true,
-        "format-wifi": "⇅ ",
+        "format-wifi": " ",
+      //  "format-wifi": "<i class='fa-solid fa-wifi-slash'></i>",
         "rotate": 0,
         "format-ethernet": "󰈀 ",
         "tooltip-format": "Network: <big><b>{essid}</b></big>\nSignal strength: <b>{signaldBm}dBm ({signalStrength}%)</b>\nFrequency: <b>{frequency}MHz</b>\nInterface: <b>{ifname}</b>\nIP: <b>{ipaddr}/{cidr}</b>\nGateway: <b>{gwaddr}</b>\nNetmask: <b>{netmask}</b>",
         "format-linked": "󰈀 {ifname} (No IP)",
-        "format-disconnected": "! ",
+        "format-disconnected": " ",
         "tooltip-format-disconnected": "Disconnected",
-        "format-alt": "<span foreground='#99ffdd'> {bandwidthDownBytes}</span> <span foreground='#ffcc66'> {bandwidthUpBytes}</span>",
+        "on-click": "/usr/local/bin/ags -t ControlPanel",
         "interval": 2,
     },
 
