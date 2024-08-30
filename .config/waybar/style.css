@@ -1,11 +1,10 @@
 * {
     font-family: "JetBrains Mono Nerd Font";
     /*font-family: "JetBrainsMono Nerd Font";*/
-    font-weight: normal; 
-    font-size: 15px;
+    font-weight: bold; 
+    font-size: 13px;
     min-height: 4px;
     margin: 0px;
-    
 }
 
 #custom-notification {
@@ -14,10 +13,10 @@
 }
 
 window#waybar {
-   background: rgba(23, 23, 23, 1);
+   background: rgba(23, 23, 23, 0.61);
     border-radius: 15px;
  /*  border: 2px solid #124323; */
-   border: 1.5px solid rgba(66, 135, 245, 0.2);
+   border: 0.0px solid rgba(66, 135, 245, 0.4);
 }
 
 tooltip {
@@ -30,6 +29,19 @@ tooltip {
 
     }
 #workspaces{
+background: rgba(23, 23, 23, 0.0);
+    color: #888789;
+    box-shadow: none;
+	text-shadow: none;
+    border-radius: 9px;
+    transition: 0.2s ease;
+    padding: 0px;
+    margin-left: 1px;
+    margin-bottom: 3px;
+    margin-top: 3px;
+    padding-left: 1px;
+    padding-right: 1px;
+    margin-right: 1px;
 
 }
 #workspaces button {
@@ -38,7 +50,7 @@ background: rgba(23, 23, 23, 0.0);
     box-shadow: none;
 	text-shadow: none;
     border-radius: 9px;
-    transition: 0.8s ease;
+    transition: 0.2s ease;
     padding: 0px;
     margin-left: 1px;
     margin-bottom: 3px;
@@ -46,7 +58,7 @@ background: rgba(23, 23, 23, 0.0);
     padding-left: 1px;
     padding-right: 1px;
     margin-right: 1px;
-   /* animation: ws_normal 20s ease-in-out 1; */
+ /*   animation: ws_normal 20s ease-in-out 1; */
 }
 
 
@@ -110,8 +122,8 @@ background: rgba(23, 23, 23, 0.0);
 
 #tray menu * {
     min-height: 16px;
-    font-weight: normal;
-    color: #c8a1cf;
+    font-weight: bold;
+    color: #9488e3;
 }
 
 #tray menu separator {
@@ -191,8 +203,8 @@ background: @bar-bg;
 }
 #clock{
     color: #FFFFFF;
-    font-size: 14px;
-    font-weight: 600;
+    font-size: 13px;
+    font-weight: 900;
     font-family: "JetBrains Mono Nerd Font";
     background: rgba(23, 23, 23, 0.0);
     opacity: 1;
@@ -218,11 +230,18 @@ color: #E6E7E7;
 #language,
 #memory,
 #mpris,
-#network,
+#network{
+color: #FFFFFF;
+font-weight: normal;
+}
 #custom-notifications,
 #custom-spotify,
 #taskbar,
 #custom-theme,
+#custom-menu{
+color: #FFFFFF;
+background:  rgba(23, 23, 23, 0.0);
+}
 #tray,
 #custom-updates,
 #custom-wallchange,
@@ -246,13 +265,10 @@ font-weight: normal;
     
 }
 #battery.charging, #battery.plugged {
-	color: #77e093;
-}
-
-#battery.critical:not(.charging) {
-    color: #161320;
-    animation-name: blink;
-    animation-duration: 1s;
+	color: #938278;
+	animation: repeat;
+	animation-name: blink;
+	animation-duration: 5s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
     animation-direction: alternate;
@@ -260,10 +276,14 @@ font-weight: normal;
 
 @keyframes blink {
     to {
-        color: #eb521e;
+        color: white;
+        
     }
 }
 
+#battery.critical:not(.charging) {
+    color: #161320;
+}
 
 
 #taskbar {
@@ -305,3 +325,16 @@ font-weight: normal;
     margin-left: 1px;
     padding-left: 3px;
 }
+
+
+/* Style for launchers */
+
+#custom-expand {
+    min-width: 25px;
+}
+
+#group-minimized {
+    border-left: solid;
+    border-left-width: 0.5;
+}
+
