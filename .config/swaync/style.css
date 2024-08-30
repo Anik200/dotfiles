@@ -11,8 +11,8 @@
   background-color: red;
 }
 .control-center {
-padding: 20px;
-  background: #171717;
+padding: 9px;
+  background: rgba(23, 23, 23, 0.4);
   border-radius: 20px 20px 20px 20px;
   border: 2px solid #124323;
   margin: 2px;
@@ -88,11 +88,11 @@ font-family: "JetBrains Mono Nerd Font";
   /* The parent to all players */
 }
 .widget-mpris-player {
-  padding: 14px;
-  margin: 14px;
+  padding: 24px;
+  margin: 0px;
   background-color: @mpris-album-art-overlay;
   border-radius: 20px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 1);
+  box-shadow: 10px 10px 10px  10px rgba(0, 0, 0, 1);
 }
 .widget-mpris-album-art {
   border-radius: 12px;
@@ -160,30 +160,37 @@ font-family: "JetBrains Mono Nerd Font";
 /* Volume widget */
 trough{
 border-radius: 20px;
-background: #171717;
-border: 3px solid #171717;
+background: rgba(15, 15, 15, 1)
+;
+/*border: 3px solid #171717;*/
+padding-right: 1px;
+padding-top: 2px;
+padding-bottom: 2px;
+padding-left: 1px;
 }
 
 trough highlight { /* ´trough´ is the background of the slider, ´highlight´ is the actual slider */
-    padding-top: 24px;
+    padding-top: 1px;
+    margin-left: -13px;
     background: #49A0E6;
     border: 0px solid #02080d;
-    border-radius: 20px;
+    border-radius: 20px 0px 0px 20px;
 }
 
 trough slider {
-    padding: 4px;
+    padding: 0px;
     background: #49A0E6;
-    border: 2px solid #02080d;
+    border: 0px solid #02080d;
+    margin-left: -10px;
 }
 trough slider:hover {
-    padding: 4px;
+    padding: 0px;
     background: #FFFFFF;
     border: 2px solid #02080d;
 }
 
 .widget-volume {
-  background-color: #242424;
+  background-color: rgba(36, 36, 36, 0.5);
   border-radius: 20px 20px 0px 0px;
   font-size: 25px;
   padding-left: 15px;
@@ -197,11 +204,11 @@ trough slider:hover {
 
 .widget-backlight {
 padding-left: 15px;
-background-color: #242424;
+background-color: rgba(36, 36, 36, 0.5);
   font-size: 25px;
   margin-left: -10px;
    margin-right: -10px;
-   margin-top: -15px;
+   margin-top: -8px;
   border-radius: 0px 0px 20px 20px;
   border: 0px solid #28282b;
 }
