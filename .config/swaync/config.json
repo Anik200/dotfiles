@@ -7,18 +7,18 @@
   	"layer-shell": true,
  	"cssPriority": "application",
    
-    "control-center-width": 190,
-    "control-center-height": 320, 
+    "control-center-width": 350,
+    "control-center-height": 670, 
     "control-center-margin-top": 5,
     "control-center-margin-bottom": 2,
     "control-center-margin-right": 5,
     "control-center-margin-left": 0,
   	
     "notification-2fa-action": true,
-  	"notification-inline-replies": false,
+  	"notification-inline-replies": true,
     "notification-window-width": 400,
     "notification-icon-size": 30,
-    "notification-body-image-height":  160,
+    "notification-body-image-height":  30,
     "notification-body-image-width": 200,
     
     "timeout": 3,
@@ -90,7 +90,19 @@
                 },
                 {
                     "label": "󰆊",
-                    "command": "waypaper"
+                    "command": "/home/anik/wofi.sh"
+                },
+                {
+                "label":"󰅇",
+                "command":"/home/anik/clip.sh"
+                },
+                {
+                "label":"",
+                "command":"/home/anik/colorpicker.sh"
+                },
+                {
+                "label":"",
+                "command":"blueman-manager"
                 }
             ]
         }
