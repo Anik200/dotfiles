@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<channel name="xfce4-notifyd" version="1.0">
+  <property name="log-max-size-enabled" type="bool" value="true"/>
+  <property name="applications" type="empty">
+    <property name="known_applications" type="array">
+      <value type="string" value="armcord"/>
+      <value type="string" value="flameshot"/>
+      <value type="string" value="notify-send"/>
+    </property>
+  </property>
+  <property name="plugin" type="empty">
+    <property name="log-icon-size" type="int" value="14"/>
+  </property>
+</channel>

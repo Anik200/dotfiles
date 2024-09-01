@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<channel name="xfce4-panel" version="1.0">
+  <property name="configver" type="int" value="2"/>
+  <property name="panels" type="array">
+    <value type="int" value="1"/>
+    <property name="dark-mode" type="bool" value="true"/>
+    <property name="panel-1" type="empty">
+      <property name="position" type="string" value="p=5;x=683;y=45"/>
+      <property name="length" type="double" value="100"/>
+      <property name="position-locked" type="bool" value="true"/>
+      <property name="icon-size" type="uint" value="14"/>
+      <property name="size" type="uint" value="26"/>
+      <property name="plugin-ids" type="array">
+        <value type="int" value="1"/>
+        <value type="int" value="3"/>
+        <value type="int" value="5"/>
+        <value type="int" value="6"/>
+        <value type="int" value="9"/>
+        <value type="int" value="10"/>
+        <value type="int" value="11"/>
+        <value type="int" value="12"/>
+        <value type="int" value="13"/>
+        <value type="int" value="14"/>
+      </property>
+      <property name="background-style" type="uint" value="0"/>
+      <property name="mode" type="uint" value="0"/>
+      <property name="autohide-behavior" type="uint" value="0"/>
+      <property name="length-adjust" type="bool" value="true"/>
+    </property>
+  </property>
+  <property name="plugins" type="empty">
+    <property name="plugin-1" type="string" value="applicationsmenu">
+      <property name="button-title" type="string" value=""/>
+      <property name="button-icon" type="string" value="void-logo-notext"/>
+    </property>
+    <property name="plugin-3" type="string" value="separator">
+      <property name="expand" type="bool" value="true"/>
+      <property name="style" type="uint" value="0"/>
+    </property>
+    <property name="plugin-5" type="string" value="separator">
+      <property name="style" type="uint" value="0"/>
+    </property>
+    <property name="plugin-6" type="string" value="systray">
+      <property name="square-icons" type="bool" value="false"/>
+      <property name="known-legacy-items" type="array">
+        <value type="string" value="wi-fi network connection “anik-30m” active: anik-30m (76%)"/>
+        <value type="string" value="wi-fi network connection “anik-30m” active: anik-30m (73%)"/>
+        <value type="string" value="wi-fi network connection “anik-30m” active: anik-30m (72%)"/>
+        <value type="string" value="wi-fi network connection “anik-30m” active: anik-30m (74%)"/>
+        <value type="string" value="pa-applet"/>
+        <value type="string" value="blueman"/>
+        <value type="string" value="wi-fi network connection “anik-30m” active: anik-30m (78%)"/>
+      </property>
+      <property name="icon-size" type="int" value="21"/>
+      <property name="single-row" type="bool" value="false"/>
+      <property name="hide-new-items" type="bool" value="false"/>
+      <property name="known-items" type="array">
+        <value type="string" value="chrome_status_icon_1"/>
+        <value type="string" value="flameshot"/>
+        <value type="string" value="blueman"/>
+      </property>
+    </property>
+    <property name="plugin-9" type="string" value="power-manager-plugin"/>
+    <property name="plugin-10" type="string" value="notification-plugin"/>
+    <property name="plugin-11" type="string" value="separator">
+      <property name="style" type="uint" value="0"/>
+    </property>
+    <property name="plugin-12" type="string" value="clock">
+      <property name="mode" type="uint" value="2"/>
+      <property name="tooltip-format" type="string" value="%x"/>
+      <property name="digital-layout" type="uint" value="3"/>
+      <property name="digital-time-font" type="string" value="JetBrainsMono Nerd Font Bold 10"/>
+      <property name="digital-time-format" type="string" value="%T"/>
+    </property>
+    <property name="plugin-13" type="string" value="separator">
+      <property name="style" type="uint" value="0"/>
+    </property>
+    <property name="plugin-14" type="string" value="actions">
+      <property name="button-title" type="uint" value="3"/>
+      <property name="custom-title" type="string" value=""/>
+      <property name="items" type="array">
+        <value type="string" value="+lock-screen"/>
+        <value type="string" value="-switch-user"/>
+        <value type="string" value="+separator"/>
+        <value type="string" value="+suspend"/>
+        <value type="string" value="-hibernate"/>
+        <value type="string" value="-hybrid-sleep"/>
+        <value type="string" value="-separator"/>
+        <value type="string" value="+shutdown"/>
+        <value type="string" value="-restart"/>
+        <value type="string" value="+separator"/>
+        <value type="string" value="+logout"/>
+        <value type="string" value="-logout-dialog"/>
+      </property>
+    </property>
+  </property>
+</channel>
