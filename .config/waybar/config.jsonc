@@ -6,10 +6,10 @@
     "layer": "top",
     "position": "top",
     "mod": "dock",
-    "margin-left": 11,
-  "margin-right": 11,
-  "margin-top": 7,
- "margin-bottom": -4,
+   // "margin-left": 11,
+//  "margin-right": 11,
+  //"margin-top": 7,
+ //"margin-bottom": -4,
     "exclusive": true,
     "passthrough": false,
     "gtk-layer-shell": true,
@@ -53,13 +53,13 @@
     "tooltip": false,
     "format": "{icon}",
     "format-icons": {
-      "notification": "<span foreground='red'><sup></sup></span>",
+      "notification": "<span foreground='#d64b4b'><sup></sup></span>",
       "none": "",
-      "dnd-notification": "<span foreground='red'><sup></sup></span>",
+      "dnd-notification": "<span foreground='#d64b4b'><sup></sup></span>",
       "dnd-none": "",
-      "inhibited-notification": "<span foreground='red'><sup></sup></span>",
+      "inhibited-notification": "<span foreground='#d64b4b'><sup></sup></span>",
       "inhibited-none": "",
-      "dnd-inhibited-notification": "<span foreground='red'><sup></sup></span>",
+      "dnd-inhibited-notification": "<span foreground='#d64b4b'><sup></sup></span>",
       "dnd-inhibited-none": ""
     },
     "return-type": "json",
@@ -72,8 +72,10 @@
   
   "hyprland/window": {  
 //"format": "{}"   // <--- these is the default value  
-"format": "<span  weight='bold' >{}</span>",
- "max-length": 13
+"format": "<span  weight='bold' >{class}</span>",
+ "max-length": 120,
+ "icon": false,
+ "icon-size": 13,
 },
 
     "custom/power": {
@@ -91,7 +93,7 @@
     
   
   "hyprland/workspaces": {
-    "format": "{}"
+    "format": "{}",
     },
 
 
@@ -268,7 +270,7 @@
         "format-charging": "",
         "format-plugged": "",
         "format-alt": "<span weight='bold' color='#c2864a'>{time} <span weight='bold' color='white'>| <span weight='bold' color='#82d457'>{capacity}%</span></span></span>",
-       "format-icons": ["","","","",""],  
+       "format-icons": ["","","","","","","",""],  
        //"format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
         "on-click-right": "pkill waybar & hyprctl dispatch exec waybar",
       //  "format-icons": [<i class='fa-solid fa-wifi-slash'></i>],
