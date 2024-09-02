@@ -3,18 +3,18 @@
     /*font-family: "JetBrainsMono Nerd Font";*/
     font-weight: bold; 
     font-size: 13px;
-    min-height: 4px;
     margin: 0px;
 }
 
 #custom-notification {
   font-family: "JetBrains Mono Nerd Font";
   font-size: 13px;
+ color: #938278;
 }
 
 window#waybar {
-   background: rgba(23, 23, 23, 0.61);
-    border-radius: 15px;
+  background: rgba(23, 23, 23, 0.61);
+  /*  border-radius: 15px; */
  /*  border: 2px solid #124323; */
    border: 0.0px solid rgba(66, 135, 245, 0.4);
 }
@@ -37,8 +37,6 @@ background: rgba(23, 23, 23, 0.0);
     transition: 0.2s ease;
     padding: 0px;
     margin-left: 1px;
-    margin-bottom: 3px;
-    margin-top: 3px;
     padding-left: 1px;
     padding-right: 1px;
     margin-right: 1px;
@@ -46,18 +44,15 @@ background: rgba(23, 23, 23, 0.0);
 }
 #workspaces button {
 background: rgba(23, 23, 23, 0.0);
-    color: #888789;
+    color: #303030;
     box-shadow: none;
 	text-shadow: none;
     border-radius: 9px;
     transition: 0.2s ease;
     padding: 0px;
-    margin-left: 1px;
-    margin-bottom: 3px;
-    margin-top: 3px;
     padding-left: 1px;
     padding-right: 1px;
-    margin-right: 1px;
+    
  /*   animation: ws_normal 20s ease-in-out 1; */
 }
 
@@ -68,7 +63,7 @@ background: rgba(23, 23, 23, 0.0);
  
   padding: 0;
   /* background-image: url("/home/anik/Documents/bar1.png");*/
-    color: #D6D5D8;  
+    color: #938278;  
     transition: all 0.3s ease;
     margin-left: 1px;
     padding-left: 0px;
@@ -91,7 +86,6 @@ background: rgba(23, 23, 23, 0.0);
 	font-size: 4px;
     padding: 0px;
     border-radius: 9px;
-    margin-top: 3px;
     margin-bottom: 3px;
     margin-left: 0px;
     padding-left: 3px;
@@ -138,14 +132,12 @@ opacity: 0.0;
 
 #custom-mouse{
 font-size: 14px;
-margin-top: 6px;
 margin-bottom: 6px;
 background:  #161320;
 }
 
 #custom-menu{
 font-size: 14px;
-margin-top: 6px;
 margin-bottom: 6px;
 background:  #161320;
 }
@@ -183,10 +175,10 @@ background:  #161320;
 #battery{
     font-weight: normal;
     font-size: 14px;
-    color: #FFFFFF;
+    color: #938278;
     background:  rgba(23, 23, 23, 0.0);
     opacity: 1;
-    margin: 6px 0px 6px 0px;
+    margin: 0px 0px 0px 0px;
     padding-left: 4px;
     padding-right: 4px;
  
@@ -202,13 +194,13 @@ background: @bar-bg;
 
 }
 #clock{
-    color: #FFFFFF;
+    color: #938278;
     font-size: 13px;
     font-weight: 900;
     font-family: "JetBrains Mono Nerd Font";
     background: rgba(23, 23, 23, 0.0);
     opacity: 1;
-    margin: 3px 0px 3px 0px;
+    margin: 0px 0px 0px 0px;
     padding-left: 10px;
     padding-right: 10px;
     border: none;
@@ -216,10 +208,10 @@ background: @bar-bg;
 }
 #pulseaudio{
 font-weight: bold;
-color: #E6E7E7;
+color: #938278;
     background:  rgba(22, 19, 32, 0.9);
     opacity: 1;
-    margin: 6px 0px 6px 0px;
+    margin: 0px 0px 0px 0px;
     padding-left: 4px;
     padding-right: 4px;
 }
@@ -231,7 +223,7 @@ color: #E6E7E7;
 #memory,
 #mpris,
 #network{
-color: #FFFFFF;
+color: #938278;
 font-weight: normal;
 }
 #custom-notifications,
@@ -239,8 +231,11 @@ font-weight: normal;
 #taskbar,
 #custom-theme,
 #custom-menu{
-color: #FFFFFF;
+color: #938278;
 background:  rgba(23, 23, 23, 0.0);
+margin: 0px 0px 0px 0px;
+    padding-left: 1px;
+    padding-right: 1px;
 }
 #tray,
 #custom-updates,
@@ -255,10 +250,10 @@ background:  rgba(23, 23, 23, 0.0);
 #cava,
 #custom-rr_end {
 font-weight: normal;
-    color: #23ACDD ;
+    color: #938278 ;
     background:  rgba(23, 23, 23, 0.0);
     opacity: 1;
-    margin: 6px 0px 6px 0px;
+    margin: 0px 0px 0px 0px;
     padding-left: 4px;
     padding-right: 4px;
   ;
@@ -276,13 +271,13 @@ font-weight: normal;
 
 @keyframes blink {
     to {
-        color: white;
+        color: grey;
         
     }
 }
 
 #battery.critical:not(.charging) {
-    color: #161320;
+    color: red;
 }
 
 
