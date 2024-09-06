@@ -2,26 +2,30 @@
     font-family: "JetBrains Mono Nerd Font";
     /*font-family: "JetBrainsMono Nerd Font";*/
     font-weight: bold; 
-    font-size: 13px;
-    margin: 0px;
+    font-size: 15px;
 }
 
 #custom-notification {
   font-family: "JetBrains Mono Nerd Font";
-  font-size: 13px;
- color: #938278;
+  font-size: 17px;
+ color: #A1BDCE;
+ margin: 3px 0px 0px 0px;
 }
 
 window#waybar {
-  background: rgba(23, 23, 23, 0.61);
+  /*background: rgba(23, 23, 23, 0.63);*/
+  background: #0F0F17;
   /*  border-radius: 15px; */
  /*  border: 2px solid #124323; */
-   border: 0.0px solid rgba(66, 135, 245, 0.4);
+ border: 3px solid #A1BDCE;
+ border-radius: 10px
 }
+
+
 
 tooltip {
         background: #171717;
-        color: #FFFFFF;
+        color: #A1BDCE;
         font-size: 13px;
         border-radius: 7px;
        border: 2px solid #101a24;
@@ -35,23 +39,21 @@ background: rgba(23, 23, 23, 0.0);
 	text-shadow: none;
     border-radius: 9px;
     transition: 0.2s ease;
-    padding: 0px;
-    margin-left: 1px;
-    padding-left: 1px;
-    padding-right: 1px;
-    margin-right: 1px;
-
+    padding-left: 4px;
+    padding-right: 4px;
+    padding-top: 1px;
 }
+
+
 #workspaces button {
 background: rgba(23, 23, 23, 0.0);
-    color: #303030;
+    color: #A1BDCE;
     box-shadow: none;
 	text-shadow: none;
     border-radius: 9px;
     transition: 0.2s ease;
-    padding: 0px;
-    padding-left: 1px;
-    padding-right: 1px;
+    padding-left: 4px;
+    padding-right: 4px;
     
  /*   animation: ws_normal 20s ease-in-out 1; */
 }
@@ -61,14 +63,11 @@ background: rgba(23, 23, 23, 0.0);
 #workspaces button.active {
 
  
-  padding: 0;
   /* background-image: url("/home/anik/Documents/bar1.png");*/
-    color: #938278;  
+    color: #A1BDCE;   
     transition: all 0.3s ease;
-    margin-left: 1px;
-    padding-left: 0px;
-    padding-right: 0px;
-    margin-right: 1px;
+    padding-left: 4px;
+    padding-right: 4px;
   /*  transition: all 0.4s cubic-bezier(.55,0.68,.48,1.682); */
   
 }
@@ -128,6 +127,9 @@ background: rgba(23, 23, 23, 0.0);
 #custom-spacer{
 opacity: 0.0;
 }
+#custom-smallspacer{
+opacity: 0.0;
+}
 
 
 #custom-mouse{
@@ -136,11 +138,6 @@ margin-bottom: 6px;
 background:  #161320;
 }
 
-#custom-menu{
-font-size: 14px;
-margin-bottom: 6px;
-background:  #161320;
-}
 
 #custom-power{
     font-size: 15px;
@@ -174,13 +171,13 @@ background:  #161320;
 }
 #battery{
     font-weight: normal;
-    font-size: 14px;
-    color: #938278;
+    font-size: 22px;
+    color: #a6d189;
     background:  rgba(23, 23, 23, 0.0);
     opacity: 1;
     margin: 0px 0px 0px 0px;
-    padding-left: 4px;
-    padding-right: 4px;
+    padding-left: 0px;
+    padding-right: 0px;
  
 }
 
@@ -194,13 +191,13 @@ background: @bar-bg;
 
 }
 #clock{
-    color: #938278;
-    font-size: 13px;
+    color: #A1BDCE;
+    font-size: 15px;
     font-weight: 900;
     font-family: "JetBrains Mono Nerd Font";
     background: rgba(23, 23, 23, 0.0);
     opacity: 1;
-    margin: 0px 0px 0px 0px;
+    margin: 3px 0px 0px 0px;
     padding-left: 10px;
     padding-right: 10px;
     border: none;
@@ -208,30 +205,54 @@ background: @bar-bg;
 }
 #pulseaudio{
 font-weight: bold;
-color: #938278;
+color: #E8EDF0;
     background:  rgba(22, 19, 32, 0.9);
     opacity: 1;
     margin: 0px 0px 0px 0px;
     padding-left: 4px;
     padding-right: 4px;
 }
-#custom-cpuinfo,
-#cpu,
+#cpu{
+font-weight: normal;
+font-size: 22px;
+color: #915CAF;
+}
 #custom-gpuinfo,
 #custom-keybindhint,
 #language,
-#memory,
-#mpris,
-#network{
-color: #938278;
+#memory{
 font-weight: normal;
+font-size: 22px;
+color: #E4C9AF;
+}
+#mpris{
+color: white;
+animation: repeat;
+	animation-name: blink;
+	animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes blink {
+    to {
+        color: #4a4a4a;
+        
+    }
+}
+#network{
+color: #A1BDCE;
+font-weight: normal;
+font-size: 16px;
+padding-right: 3px;
 }
 #custom-notifications,
 #custom-spotify,
 #taskbar,
 #custom-theme,
 #custom-menu{
-color: #938278;
+color: #E8EDF0;
 background:  rgba(23, 23, 23, 0.0);
 margin: 0px 0px 0px 0px;
     padding-left: 1px;
@@ -248,9 +269,13 @@ margin: 0px 0px 0px 0px;
 #custom-sr_end,
 #custom-rl_end,
 #cava,
+#mpris{
+
+font-weight: bold
+}
 #custom-rr_end {
 font-weight: normal;
-    color: #938278 ;
+    color: #E8EDF0;
     background:  rgba(23, 23, 23, 0.0);
     opacity: 1;
     margin: 0px 0px 0px 0px;
@@ -260,21 +285,10 @@ font-weight: normal;
     
 }
 #battery.charging, #battery.plugged {
-	color: #938278;
-	animation: repeat;
-	animation-name: blink;
-	animation-duration: 5s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
+	color: #E8EDF0;
+	
 }
 
-@keyframes blink {
-    to {
-        color: grey;
-        
-    }
-}
 
 #battery.critical:not(.charging) {
     color: red;
@@ -326,6 +340,8 @@ font-weight: normal;
 
 #custom-expand {
     min-width: 25px;
+    color: #A1BDCE;
+    font-size: 16px;
 }
 
 #group-minimized {
