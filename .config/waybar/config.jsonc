@@ -6,10 +6,10 @@
     "layer": "top",
     "position": "top",
     "mod": "dock",
-   // "margin-left": 11,
-//  "margin-right": 11,
-  //"margin-top": 7,
- //"margin-bottom": -4,
+   "margin-left": 10,
+ "margin-right": 10,
+ "margin-top": 7,
+ "margin-bottom": 0,
     "exclusive": true,
     "passthrough": false,
     "gtk-layer-shell": true,
@@ -18,15 +18,45 @@
 
 // positions generated based on config.ctl //
 
-	"modules-left": ["custom/spacer","hyprland/workspaces"],
+	"modules-left": ["custom/smallspacer","hyprland/workspaces","custom/spacer","mpris"],
 	"modules-center": ["custom/padd","custom/l_end","custom/r_end","hyprland/window","custom/padd"],
-	"modules-right": ["custom/padd","custom/l_end","group/expand","custom/spacer","network","battery","clock","custom/notification","custom/padd"],
+	"modules-right": ["custom/padd","custom/l_end","group/expand","custom/spacer","network","battery","memory","cpu","clock","custom/notification","custom/padd"],
 
 
 // sourced from modules based on config.ctl //
 
 
+"custom/smallspacer":{
+"format": " ",
+},
+"memory": {
+    "interval": 1,
+    "rotate": 270,
+    "format": "{icon}",
+    "format-icons": ["󰝦","󰪞","󰪟","󰪠","󰪡","󰪢","󰪣","󰪤","󰪥"],
+    "max-length": 10
+},
+"cpu": {
+    "interval": 1,
+    "format": "{icon}",
+    "rotate": 270,
+    "format-icons": ["󰝦","󰪞","󰪟","󰪠","󰪡","󰪢","󰪣","󰪤","󰪥"],
+},
 
+
+"mpris": {
+	"format": "{player_icon} {dynamic}",
+	"format-paused": "<span color='grey'>{status_icon} {dynamic}</span>",
+	"max-length": 30,
+	"player-icons": {
+		"default": "⏸",
+		"mpv": "🎵"
+	},
+	"status-icons": {
+		"paused": "▶" 
+	},
+	// "ignored-players": ["firefox"]
+},
 "tray": {
         "icon-size": 16,
         "rotate": 0,
@@ -36,16 +66,16 @@
    "group/expand": {
      "orientation": "horizontal",
      "drawer": {
-         "transition-duration": 100,
+         "transition-duration": 600,
          "children-class": "not-power",
-       "transition-left-to-right": true,
+       "transition-to-left": true,
          "click-to-reveal": true
      },
-     "modules": ["custom/menu","tray"]
+     "modules": ["custom/menu","custom/spacer","tray"]
    },
 
  "custom/menu":{
- "format": "",
+ "format": "󰅃",
  },
  
 
@@ -53,14 +83,14 @@
     "tooltip": false,
     "format": "{icon}",
     "format-icons": {
-      "notification": "<span foreground='#d64b4b'><sup></sup></span>",
-      "none": "",
-      "dnd-notification": "<span foreground='#d64b4b'><sup></sup></span>",
-      "dnd-none": "",
-      "inhibited-notification": "<span foreground='#d64b4b'><sup></sup></span>",
-      "inhibited-none": "",
-      "dnd-inhibited-notification": "<span foreground='#d64b4b'><sup></sup></span>",
-      "dnd-inhibited-none": ""
+      "notification": "󰅸",
+      "none": "󰂜",
+      "dnd-notification": "󰅸",
+      "dnd-none": "󱏨",
+      "inhibited-notification": "󰅸",
+      "inhibited-none": "󰂜",
+      "dnd-inhibited-notification": "󰅸",
+      "dnd-inhibited-none": "󱏨"
     },
     "return-type": "json",
     "exec-if": "which swaync-client",
@@ -99,15 +129,25 @@
 
     
     
-//"hyprland/workspaces": {
-	//"format": "{icon}",
-	//"format-icons": {
-	//"active": "",
-	//"active": "",
+"hyprland/workspaces": {
+	"format": "{icon}",
+	"format-icons": {
+	"default": "",
+	"active": "",
 	//"default": "○",
 	//"default": "●"
-	//},
-//},
+	},
+},
+
+"wlr/workspaces": {
+    "persistent-workspaces": {
+        "3": [], // Always show a workspace with name '3', on all outputs if it does not exists
+        "4": ["eDP-1"], // Always show a workspace with name '4', on output 'eDP-1' if it does not exists
+        "5": ["eDP-1", "DP-2"] // Always show a workspace with name '5', on outputs 'eDP-1' and 'DP-2' if it does not exists
+    }
+},
+
+
 "cava": {
        "cava_config": "~/.config/cava/config",
       "framerate": 60,
@@ -266,11 +306,12 @@
             "critical": 20
         },
         "format": "{icon}",
-        "rotate": 0,
-        "format-charging": "",
-        "format-plugged": "",
-        "format-alt": "<span weight='bold' color='#c2864a'>{time} <span weight='bold' color='white'>| <span weight='bold' color='#82d457'>{capacity}%</span></span></span>",
-       "format-icons": ["","","","","","","",""],  
+        "rotate": 270,
+        "format-charging": "󰂄",
+        "format-plugged": "󰂄",
+       // "format-alt": "<<span weight='bold' color='#c2864a'>{time} <span weight='bold' color='white'>| <span weight='bold' color='#82d457'>{capacity}%</span></span></span>",
+        "format-icons": ["󰝦","󰪞","󰪟","󰪠","󰪡","󰪢","󰪣","󰪤","󰪥"],
+     //  "format-icons": ["","","","","","","",""],  
        //"format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
         "on-click-right": "pkill waybar & hyprctl dispatch exec waybar",
       //  "format-icons": [<i class='fa-solid fa-wifi-slash'></i>],
@@ -291,7 +332,8 @@
 
     "network": {
         "tooltip": true,
-        "format-wifi": " ",
+        "format-wifi": "{icon} ",
+        "format-icons": ["󰤟", "󰤢", "󰤥", "󰤨"],
       //  "format-wifi": "<i class='fa-solid fa-wifi-slash'></i>",
         "rotate": 0,
         "format-ethernet": "󰈀 ",
