@@ -20,11 +20,37 @@
 
 	"modules-left": ["custom/smallspacer","hyprland/workspaces","custom/spacer","mpris"],
 	"modules-center": ["custom/padd","custom/l_end","custom/r_end","hyprland/window","custom/padd"],
-	"modules-right": ["custom/padd","custom/l_end","group/expand","custom/spacer","network","battery","memory","cpu","clock","custom/notification","custom/padd"],
+	"modules-right": ["custom/padd","custom/l_end","group/expand","network","group/expand-3","group/expand-2","group/expand-4","memory","cpu","clock","custom/notification","custom/padd"],
 
 
 // sourced from modules based on config.ctl //
 
+"upower": {
+     "icon-size": 20,
+      "format": "",
+     "format-alt": "{}<span color='orange'>[{time}]</span>",
+     "tooltip": true,
+     "tooltip-spacing": 20,
+      "on-click-right": "pkill waybar & hyprctl dispatch exec waybar"
+},
+
+"upower#headset": {
+"format": " {percentage}",
+"native-path": "/org/freedesktop/UPower/devices/headset_dev_A6_98_9A_0D_D3_49",
+"show-icon": false,
+"tooltip": false,
+},
+
+"group/expand-4": {
+     "orientation": "horizontal",
+     "drawer": {
+         "transition-duration": 600,
+         "children-class": "not-power",
+       "transition-to-left": true,
+         "click-to-reveal": true
+     },
+     "modules": ["upower","upower/headset"]
+   },
 
 "custom/smallspacer":{
 "format": " ",
@@ -69,13 +95,14 @@
          "transition-duration": 600,
          "children-class": "not-power",
        "transition-to-left": true,
-         "click-to-reveal": true
+       //  "click-to-reveal": true
      },
      "modules": ["custom/menu","custom/spacer","tray"]
    },
 
  "custom/menu":{
  "format": "󰅃",
+ "rotate": 90,
  },
  
 
@@ -120,11 +147,6 @@
     "format": "|"
     },
     
-    
-  
-  "hyprland/workspaces": {
-    "format": "{}",
-    },
 
 
     
@@ -306,8 +328,8 @@
             "critical": 20
         },
         "format": "{icon}",
-        "rotate": 270,
-        "format-charging": "󰂄",
+        "rotate": 0,
+        "format-charging": "<span color='#a6d189'>󱐋</span>",
         "format-plugged": "󰂄",
        // "format-alt": "<<span weight='bold' color='#c2864a'>{time} <span weight='bold' color='white'>| <span weight='bold' color='#82d457'>{capacity}%</span></span></span>",
         "format-icons": ["󰝦","󰪞","󰪟","󰪠","󰪡","󰪢","󰪣","󰪤","󰪥"],
@@ -322,18 +344,37 @@
         "device": "intel_backlight",
         "rotate": 0,
         "format": "{icon}",
-        "format-alt": "{icon} {percent}%",
-        "format-icons": ["", "", "", "", "", "", "", "", ""],
-         "on-click-right": "m8mouse -dpi 1 -led 2 -speed 4",
-        "on-click-middle": "m8mouse -dpi 1 -led 7 -speed 4",
+        "format-icons": ["󰃞", "󰃝", "󰃟", "󰃠"],
         "scroll-step": 1,
         "min-length": 2
     },
+    
+     "group/expand-2": {
+     "orientation": "horizontal",
+     "drawer": {
+         "transition-duration": 600,
+         "children-class": "not-power",
+       "transition-to-left": true,
+         "click-to-reveal": true
+     },
+     "modules": ["backlight","backlight/slider"]
+   },
+   
+    "group/expand-3": {
+     "orientation": "horizontal",
+     "drawer": {
+         "transition-duration": 600,
+         "children-class": "not-power",
+       "transition-to-left": true,
+         "click-to-reveal": true
+     },
+     "modules": ["pulseaudio","pulseaudio/slider"]
+   },
 
     "network": {
         "tooltip": true,
         "format-wifi": "{icon} ",
-        "format-icons": ["󰤟", "󰤢", "󰤥", "󰤨"],
+        "format-icons": ["󰤟", "󰤢", "󰤥"],
       //  "format-wifi": "<i class='fa-solid fa-wifi-slash'></i>",
         "rotate": 0,
         "format-ethernet": "󰈀 ",
@@ -347,11 +388,8 @@
 
     "pulseaudio": {
         "format": "{icon}",
-        "format-alt": "{icon} {volume}",
         "rotate": 0,
         "format-muted": "婢",
-        "on-click-right": "pavucontrol",
-        "on-click-middle": "volumecontrol.sh -o m",
         "tooltip-format": "{icon} {desc} // {volume}%",
         "scroll-step": 5,
         "format-icons": {
@@ -462,4 +500,20 @@
         "tooltip": false
     },
 
+
+"backlight/slider": {
+    "min": 5,
+    "max": 100,
+    "rotate": 0,
+    "device": "intel_backlight",
+    "scroll-step": 1,
+  },
+  
+  "pulseaudio/slider": {
+    "min": 5,
+    "max": 100,
+    "rotate": 0,
+    "device": "pulseaudio",
+    "scroll-step": 1,
+  },
 }
