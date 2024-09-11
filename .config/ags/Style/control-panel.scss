@@ -1,0 +1,56 @@
+
+//box-shadow: 4px 4px 2px rgba($bg0, 0.8), -3px -3px 2px rgba($bg2, 0.5);
+//box-shadow: -4px -4px 2px rgba($bg0, 0.8), 3px 3px 2px rgba($bg2, 0.5);
+// Control Panel
+////////////////////////////////////////////////////////////////////////////
+
+.control-panel-box{
+    background-color: #0F0F0F;
+    border-radius: 1rem;
+    border: 3px solid #27272E;
+    margin: 0.2rem;
+}
+
+.control-panel-button{
+    all: unset;
+    background-color: #0F0F0F;
+    border-radius: 1rem;
+    border-color: rgba($bg0, $mediumOpacity);
+    border-width: 1px;
+    border-style: solid;
+    margin: 0.2rem;
+}
+
+.control-panel-sub-button{
+    background-color: rgba($bg1, $mediumOpacity);
+    //margin: 0.2rem;
+}
+
+.control-panel-button:hover{
+    background-color: $accent3;
+}
+
+.control-panel-sub-button:hover{
+    background-color: $accent3;
+}
+
+
+
+// This is used to provide padding for content within a control panel button
+.control-panel-button-content{
+    padding: 0.4rem;
+}
+
+.control-panel-audio-box {
+    border-radius: 1rem;
+    padding: 0.4rem;
+    margin: 0.2rem;
+    background-color: rgba($bg1, $mediumOpacity);
+}
+
+.control-panel-widget-large{
+    padding: 0.4rem;
+    background-color: rgba($bg1, $lowOpacity);
+    border-radius: 1rem;
+    margin: 0.2rem;
+}

@@ -1,0 +1,53 @@
+
+// Sliders
+////////////////////////////////////////////////////////////////////////////
+scale {
+    &, * {
+        all: unset;
+    }
+}
+
+/* The background */
+scale trough{
+ background-color: rgba($bg0, $mediumOpacity); 
+  border-radius: 20px;
+  /* Accounts for the extension of the highlight */
+  padding: 4px 20px; 
+}
+
+.vertical-slider trough{
+  /* Accounts for the extension of the highlight */
+  padding: 20px 4px; 
+}
+
+scale trough:hover > slider{
+  background-color: $accent3;
+}
+
+/* The highligh */
+scale highlight{
+  border-radius: 20px;
+background-color: $accent1;
+  /* Forces highlight to extend to match the slider positon  on the ends */
+  margin: 0 -14px; 
+}
+.vertical-slider highlight {
+  /* Forces highlight to extend to match the slider positon  on the ends */
+  margin: -14px 0px; 
+}
+
+/* The dot */
+scale slider{
+  min-height: 28px;
+  min-width: 28px;
+  border-radius: 100%;
+  background-color: $accent1;
+  border-style: solid;
+  border-width: 0px;
+  border-color: $accent1;
+  box-shadow: 0px 0px 4px $bg0;
+}
+
+scale slider:hover{
+  background-color: $accent3;
+}
