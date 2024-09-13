@@ -13,8 +13,7 @@
 }
 
 window#waybar {
-  /*background: rgba(23, 23, 23, 0.63);*/
-  background: #0F0F17;
+    background: #0F0F17; 
   /*  border-radius: 15px; */
  /*  border: 2px solid #124323; */
 /* border: 0px solid #A1BDCE; */
@@ -216,6 +215,15 @@ font-weight: normal;
 font-size: 22px;
 color: #915CAF;
 }
+#custom-led{
+background: #427287;
+color: #FFFFFF;
+margin-top: 7px;
+margin-bottom: 7px;
+padding-left: 6px;
+border-radius: 7px;
+margin-right: 6px;
+}
 #custom-gpuinfo,
 #custom-keybindhint,
 #language,
@@ -273,8 +281,12 @@ font-family: "Martian Mono";
 #custom-sr_end,
 #custom-rl_end,
 #cava,
+#upower#headset,
+#upower{
+color: #a6d189;
+}
 #mpris{
-
+font-size: 15px;
 font-weight: bold
 }
 #custom-rr_end {
