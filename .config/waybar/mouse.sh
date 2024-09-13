@@ -11,34 +11,6 @@ if [ $? -eq 0 ]; then
   # Extract the LED Mode from the output and remove any extra text
   LED_MODE=$(echo "$LED_STATUS" | grep "LED Mode" | awk -F: '{print $2}' | xargs | awk '{print $1}')
 
-  # Determine the LED status based on the LED Mode value
-  case "$LED_MODE" in
-    1)
-      echo "The mouse LED is in DPI mode."
-      ;;
-    2)
-      echo "The mouse LED is in Multicolor mode."
-      ;;
-    3)
-      echo "The mouse LED is in Rainbow mode."
-      ;;
-    4)
-      echo "The mouse LED is in Flow mode."
-      ;;
-    5)
-      echo "The mouse LED is in Waltz mode."
-      ;;
-    6)
-      echo "The mouse LED is in Four Seasons mode."
-      ;;
-    7)
-      echo "The mouse LED is OFF."
-      ;;
-    *)
-      echo "Unexpected LED Mode value: $LED_MODE"
-      ;;
-  esac
-
   # Decide what to do based on the current LED mode
   if [ "$LED_MODE" == "7" ]; then
     # If the LED mode is 7 (Off), set it to 2 (Multicolor)
