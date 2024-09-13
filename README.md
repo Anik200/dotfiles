@@ -1,6 +1,9 @@
 # My Waybar config 
-![image](https://github.com/user-attachments/assets/c3054dee-840e-4827-8818-6f42d036c346)
+![image](https://github.com/user-attachments/assets/251c791b-a292-4837-9b4b-94dab2040c79)
 
-![image](https://github.com/user-attachments/assets/e2de32c0-51cf-4259-85a0-6b440f057a81)
 
-![image](https://github.com/user-attachments/assets/d81d9482-835d-4160-952b-5b2bf9c38da8)
+![image](https://github.com/user-attachments/assets/141eee63-735c-4ec2-9dc5-d0595239e6b7)
+
+
+![image](https://github.com/user-attachments/assets/506ee37b-f5f6-49c3-97f9-0c0543a3e749)
+
