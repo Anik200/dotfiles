@@ -1,25 +1,24 @@
 * {
-    font-family: "JetBrains Mono Nerd Font";
+    font-family: "CaskaydiaCove Nerd Font Mono";
     /*font-family: "JetBrainsMono Nerd Font";*/
     font-weight: bold; 
     font-size: 15px;
 }
 
 #custom-notification {
-  font-family: "JetBrains Mono Nerd Font";
+  font-family: "CaskaydiaCove Nerd Font Mono";
   font-size: 17px;
  color: #A1BDCE;
  margin: 2px 0px 0px 0px;
 }
 
 window#waybar {
-  /*background: rgba(23, 23, 23, 0.63);*/
-  background: #0F0F17;
+    background: #0F0F0F; 
   /*  border-radius: 15px; */
  /*  border: 2px solid #124323; */
 /* border: 0px solid #A1BDCE; */
- border: 3px solid rgba(255, 255, 255, 0.1);
- border-radius: 10px;
+ border: 2px solid #212121;
+ border-radius: 3px;
 }
 
 
@@ -192,7 +191,7 @@ background: @bar-bg;
     color: #A1BDCE;
     font-size: 15px;
     font-weight: 900;
-    font-family: "JetBrains Mono Nerd Font";
+    font-family: "CaskaydiaCove Nerd Font Mono";
     background: rgba(23, 23, 23, 0.0);
     opacity: 1;
     margin: 3px 0px 0px 0px;
@@ -215,6 +214,15 @@ color: #6F8FDB;
 font-weight: normal;
 font-size: 22px;
 color: #915CAF;
+}
+#custom-led{
+background: #427287;
+color: #FFFFFF;
+margin-top: 7px;
+margin-bottom: 7px;
+padding-left: 6px;
+border-radius: 7px;
+margin-right: 6px;
 }
 #custom-gpuinfo,
 #custom-keybindhint,
@@ -278,7 +286,7 @@ font-family: "Martian Mono";
 color: #a6d189;
 }
 #mpris{
-
+font-size: 15px;
 font-weight: bold
 }
 #custom-rr_end {
