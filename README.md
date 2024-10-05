@@ -4,14 +4,18 @@ Hyperdots for my Hyprland Rice
 # AGS config
 prefer to https://github.com/mewoocat/NixOS and the `ags-overhaul` branch for the ags configs
 
-https://github.com/user-attachments/assets/66fa42fe-e760-4bf8-b600-ad7a13fc6c71
 
-![image](https://github.com/user-attachments/assets/3bd7dbf9-efad-42bf-81fd-752b4f9ba5a6)
+https://github.com/user-attachments/assets/11b790cb-f282-4fcc-9f0d-3a3e949c1489
 
 
-![image](https://github.com/user-attachments/assets/28186d4a-8f7c-44a3-9feb-f5a48c1bcfac)
 
-![image](https://github.com/user-attachments/assets/ff932902-3223-4a79-b24f-822393067a46)
+
+![image](https://github.com/user-attachments/assets/22469361-ce23-4507-a909-11e8abaf7b98)
+
+![image](https://github.com/user-attachments/assets/be87a4c4-c140-4168-8fc6-4eefd6f78191)
+
+![image](https://github.com/user-attachments/assets/84627e4e-cbea-4875-a0fd-689697b6050c)
+
 
 
 
