@@ -1,7 +1,7 @@
 {
   	"$schema": "/etc/xdg/swaync/configSchema.json",
-  	"positionX": "right",
-  	"positionY": "top",
+  	"positionX": "left",
+  	"positionY": "bottom",
   	"layer": "overlay",
   	"control-center-layer": "top",
   	"layer-shell": true,
@@ -32,8 +32,6 @@
     "hide-on-action": true,
     "script-fail-notify": true,
     "widgets": [
-    	"volume", 
-   	"backlight",
         "mpris",
         "network",
         "buttons-grid"
@@ -55,12 +53,6 @@
             "image-size": 30,
             "image-radius": 10
         },
-        "volume": {
-            "label": "󰕾"
-        },
-        "backlight": {
-            "label": "󰃟"
-        },
         "buttons-grid": {
             "actions": [
                 {
@@ -71,30 +63,6 @@
                 {
                     "label": "󰐥",
                     "command": "hyprctl dispatch exit"
-                },
-                {
-                    "label": "",
-                    "command": "m8mouse -dpi 1 -led 2 -speed 4"
-                },
-                {
-                    "label": "",
-                    "command": "m8mouse -dpi 1 -led 7 -speed 4"
-                },
-                {
-                "label": "", 
-                "command": "pkill gammastep"
-                },
-                {
-                "label": "",
-                "command": "gammastep -O 4500"
-                },
-                {
-                    "label": "󰆊",
-                    "command": "/home/anik/wofi.sh"
-                },
-                {
-                "label":"󰅇",
-                "command":"/home/anik/clip.sh"
                 },
                 {
                 "label":"",
