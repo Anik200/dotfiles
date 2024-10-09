@@ -1,0 +1,81 @@
+
+
+// Workspaces
+////////////////////////////////////////////////////////////////////////////
+
+// Default inactive
+.ws-indicator{
+    background-color: dimgray; //Todo
+    border-radius: 1.2rem;
+    margin: 0rem 0.24rem;
+    min-width: 1.2rem;
+    min-height: 1.2rem;
+    transition: min-width 0.3s;
+    transition: min-height 0.3s;
+}
+
+.ws-inactive{
+    min-width: 0.6rem;
+    min-height: 0.6rem;
+    label{
+        font-size: 0rem;
+    }
+}
+
+.ws-button{
+    all: unset;
+    padding: 0; // Remove default padding from ws buttons
+    min-width: 1.8rem;
+    label{
+        font-size: 0rem;
+        color: $bg3;
+    }
+}
+
+// Removes default properties for buttons
+.ws-button > * {
+    padding: 0rem;
+    //border-radius: 0rem;
+}
+
+// On hover color
+.ws-button:hover > box{
+    background-color: $accent3;
+    label{
+        color: $bg0; 
+    }
+}
+.ws-button:hover > .ws-inactive {
+    min-width: 1.2rem;
+    min-height: 1.2rem;
+    transition: min-width 0.3s;
+    transition: min-height 0.3s;
+}
+
+.ws-button:hover > .ws-active{
+    min-width: 2.4rem;
+    min-height: 1.2rem;
+}
+
+/* Occupied needs to come before active */
+.ws-occupied{
+    background-color: $accent1;
+    label{
+        min-width: 1.2rem;
+        min-height: 1.2rem;
+        font-size: 0.8rem;
+        color: $bg0;
+    }
+}
+
+.ws-active{
+    background-color: $accent3;
+    min-width: 2.4rem;
+    min-height: 1.2rem;
+    label{
+        min-width: 2.4rem;
+        min-height: 1.2rem;
+        font-size: 0.8rem;
+        color: $bg0;
+    }
+}

@@ -1,0 +1,56 @@
+
+.tab-container{    
+    background-color: rgba($bg1, $lowOpacity);
+    padding: 1rem;
+    min-width: 12em;
+}
+
+// Settings tab Button
+.settings-tab-button {
+    all: unset;
+    background-color: transparent;
+    padding: 0.28rem; // Currently determines bar height
+}
+
+.settings-tab-button:active {
+}
+
+.settings-tab-button > * {
+    padding: 0.4rem 0.8rem;
+    border-radius: 0.8rem;
+}
+
+.settings-tab-button:hover > * {
+    background-color: $accent3;
+    color: $fgAlt;
+}
+
+.settings-tab-active > *{
+    background-color: $accent3;
+    color: $fgAlt;
+}
+
+
+.header{
+    font-size: 24px;
+    margin: 1rem;
+    font-weight: bold;
+}
+
+.sub-header{
+    font-size: 16px;
+    margin: 1rem;
+    font-weight: bold;
+}
+
+.option-container{
+    border-radius: 1rem;
+    padding: 0.8rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-top: 0.4rem;
+    margin-bottom: 0.4rem;
+    background-color: rgba($bg1, $lowOpacity);
+    min-width: 28em;
+    min-height: 4em;
+}
