@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Directory containing wallpapers
-WALLPAPER_DIR="/home/anik/Downloads/walls/"
+WALLPAPER_DIR="$HOME/Downloads/walls/"
 
 
 while true; do
