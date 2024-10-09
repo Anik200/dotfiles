@@ -18,16 +18,16 @@
 
 // positions generated based on config.ctl //
 
-	"modules-left": ["custom/spacer","hyprland/workspaces","custom/spacer","mpris"],
-	"modules-center": [],
-	"modules-right": ["group/expand","network","group/expand-3","group/expand-2","clock","upower","custom/notification","custom/spacer","custom/spacer"],
+	"modules-left": ["custom/spacer","hyprland/workspaces","custom/spacer"],
+	"modules-center": ["mpris"],
+	"modules-right": ["group/expand","network","group/expand-3","group/expand-2","clock","upower","custom/notification"],
 
 
 // sourced from modules based on config.ctl //
 
 "custom/led": {
-    "format": "<span color='#021c18'>󰍿</span> <span color='#313436'></span> ",
-    "format-alt": "󰍿 <span color='#bbc2c7'></span> ",
+    "format": "<span color='#AFAFAF'>󰍿</span><span color='#AFAFAF'> </span> ",
+    "format-alt": "󰍿<span color='#83A1F6'> </span> ",
     "on-click": "~/mouse.sh",
     "rotate": 90,
     "tooltip": false,
@@ -36,8 +36,9 @@
 "upower": {
      "icon-size": 20,
       "format": "",
-     "format-alt": "{}<span color='orange'>[{time}]</span>",
+     "on-click": "/home/anik/battery.sh",
      "tooltip": true,
+     "rotate": 0,
      "tooltip-spacing": 20,
       "on-click-right": "pkill waybar & hyprctl dispatch exec waybar"
 },
@@ -80,15 +81,16 @@
 
 
 "mpris": {
-	"format": "{player_icon} {dynamic}",
-	"format-paused": "<span color='grey'>{status_icon} {dynamic}</span>",
-	"max-length": 50,
+	"format": "󰝚 {player_icon}",
+	"rotate": 90,
+	"format-paused": "<span color='#2d2d2e'>󰝚 {status_icon}</span>",
+	"max-length": 6,
 	"player-icons": {
-		"default": "⏸",
-		"mpv": "🎵"
+		"default": "󰏤",
+		"mpv": "󰝚"
 	},
 	"status-icons": {
-		"paused": "▶" 
+		"paused": "󰐊" 
 	},
 	// "ignored-players": ["firefox"]
 },
@@ -120,14 +122,14 @@
     "rotate": 0,
     "format": "{icon}",
     "format-icons": {
-      "notification": "󰅸",
-      "none": "󰂜",
-      "dnd-notification": "󰅸",
-      "dnd-none": "󱏨",
-      "inhibited-notification": "󰅸",
-      "inhibited-none": "󰂜",
-      "dnd-inhibited-notification": "󰅸",
-      "dnd-inhibited-none": "󱏨"
+      "notification": "󱅫",
+      "none": "󰂚",
+      "dnd-notification": "󱅫",
+      "dnd-none": "󰂚",
+      "inhibited-notification": "󱅫",
+      "inhibited-none": "󰂚",
+      "dnd-inhibited-notification": "󱅫",
+      "dnd-inhibited-none": "󰂚"
     },
     "return-type": "json",
     "exec-if": "which swaync-client",
@@ -168,7 +170,7 @@
 	"format": "{icon}",
 	"format-icons": {
 	"default": "",
-	"active": "",
+	"active": "",
 	//"default": "○",
 	//"active": "⦿"
 	},
@@ -269,7 +271,7 @@
 
 	"wlr/taskbar": {
 		"format": "{icon}",
-		"rotate": 0,
+		"rotate": 90,
 		"icon-size": 18,
 		"icon-theme": "Tela-circle-dracula",
         "spacing": 0,
@@ -309,7 +311,8 @@
     },
 
     "clock": {
-        "format": "{:%I\n%M}",
+        "format": "{:%I\n%M\n%S}",
+        "interval": 1,
         "rotate": 0,
        "on-click": "/usr/local/bin/ags -t ActivityCenter",
         "tooltip-format": "<tt>{calendar}</tt>",
@@ -332,7 +335,6 @@
             "on-scroll-down": "shift_down"
         }
     },
-
 
     "battery": {
         "states": {
@@ -358,7 +360,8 @@
         "rotate": 0,
         "format": "{icon}",
         "format-icons": ["󰃞", "󰃝", "󰃟", "󰃠"],
-        "scroll-step": 1,
+       "on-scroll-up": "brightnessctl set +5%",
+       "on-scroll-down": "brightnessctl s 5%-",
         "min-length": 2
     },
     
@@ -393,7 +396,7 @@
         "format-ethernet": "󰈀 ",
         "tooltip-format": "Network: <big><b>{essid}</b></big>\nSignal strength: <b>{signaldBm}dBm ({signalStrength}%)</b>\nFrequency: <b>{frequency}MHz</b>\nInterface: <b>{ifname}</b>\nIP: <b>{ipaddr}/{cidr}</b>\nGateway: <b>{gwaddr}</b>\nNetmask: <b>{netmask}</b>",
         "format-linked": "󰈀 {ifname} (No IP)",
-        "format-disconnected": " ",
+        "format-disconnected": "",
         "tooltip-format-disconnected": "Disconnected",
         "on-click": "/usr/local/bin/ags -t ControlPanel",
         "interval": 2,
