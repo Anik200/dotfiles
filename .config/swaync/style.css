@@ -12,9 +12,9 @@
 }
 .control-center {
 padding: 9px;
-  background: rgba(23, 23, 23, 0.4);
+  background: rgba(17, 17, 17, 0.7);
   border-radius: 20px 20px 20px 20px;
-  border: 2px solid #124323;
+  border: 3px solid rgba(255, 255, 255, 0.1);
   margin: 2px;
 }
 
@@ -37,14 +37,14 @@ padding: 9px;
 .widget-title {
 font-family: "JetBrains Mono Nerd Font";
 font-weight: bold;
-  margin: 8px;
+  margin: 0px;
   font-size: 1.5rem;
 }
 .widget-title > button {
   font-size: initial;
   color: white;
   text-shadow: none;
-  background:  #0c0817;
+  background:  #A1BDCE;
   border: 1px solid #04030a;
   box-shadow: none;
   border-radius: 12px;
@@ -131,16 +131,18 @@ font-family: "JetBrains Mono Nerd Font";
 }
 
 .widget-buttons-grid>flowbox>flowboxchild>button{
-  padding: 9px;
-  padding-top: 2px;
-  padding-bottom: 2px;
+color: #A1BDCE;
+  padding: 10px 15px 10px 15px;
   background:  #242424;
   border-radius: 10px;
-  border: 1px solid #04030a;
+  border: 3px solid #343434;
+  transition: 0.5s ease;
 }
 
 .widget-buttons-grid>flowbox>flowboxchild>button:hover {
-  background:  #C6E58E;
+  background:  #343434;
+  padding: 13px 20px 13px 20px;
+  box-shadow: 1px 1px 1px 1px #A1BDCE;
 }
 
 /* Menubar widget */
@@ -229,4 +231,88 @@ background-color: rgba(36, 36, 36, 0.5);
 }
 .widget-inhibitors > button:hover {
   background: @noti-bg-hover;
+}
+
+
+.notification-row {
+  outline: none;
+  margin: 0px;
+  padding: 0px;
+
+}
+
+.notification {
+font-family: "JetBrains Mono Nerd Font";
+  border: 4px solid #343434;
+  border-radius: 12px;
+  background: rgba(21, 21, 21, 0.8);
+  margin: 3px 6px 3px 4px;
+  padding-bottom: 10px;
+}
+
+.notification:hover {
+  border: 4px solid #343434;
+  border-radius: 12px;
+  background: #0F0F0F;
+  margin: 3px 6px 3px 4px;
+  padding-bottom: 10px;
+}
+
+.notification-content {
+  background: transparent;
+  
+}
+
+.notification-default-action {
+  margin: 3px 6px 3px 6px;
+  padding: 0;
+  border-radius: 10px;
+}
+
+.close-button {
+  background: #0F0F0F;
+  text-shadow: none;
+  padding: 0px;
+  border-radius: 40px;
+  margin-top: 5px;
+  margin-right: 5px;
+}
+
+.close-button:hover {
+  box-shadow: none;
+  background: #454545;
+  transition: all 0.15s ease-in-out;
+  border: none;
+}
+
+.notification-action {
+  border: 3px solid #343434;
+  border-top: none;
+  border-radius: 0px;
+}
+
+.notification-default-action:hover,
+.notification-action:hover {
+  color: #7aa2f7;
+  background: @cc-bg;
+}
+
+.notification-default-action {
+  border-radius: 5px;
+  margin: 3px 6px 3px 6px;
+}
+
+.notification-default-action:not(:only-child) {
+  border-bottom-left-radius: 7px;
+  border-bottom-right-radius: 7px;
+}
+
+.notification-action:first-child {
+  border-bottom-left-radius: 10px;
+  background: rgba(21, 21, 21, 0.8);
+}
+
+.notification-action:last-child {
+  border-bottom-right-radius: 10px;
+  background: rgba(21, 21, 21, 0.8);
 }
