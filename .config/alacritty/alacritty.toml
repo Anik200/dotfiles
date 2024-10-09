@@ -9,7 +9,7 @@ import = [
 # author tonsky
 
 [colors.primary]  
-background = '#0E1E24'
+background = '#0F0F0F'
 foreground = '#CECECE'
 
 [colors.cursor]
@@ -43,4 +43,4 @@ cyan = '#4ac9e2'
 white = '#FFFFFF'
 
 [font.normal]
-family = 'hack'
+family = 'JetBrains Mono Nerd Font'
