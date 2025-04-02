@@ -62,7 +62,7 @@
                 },
                 {
                     "label": "󰐥",
-                    "command": "hyprctl dispatch exit"
+                    "command": "wlogout"
                 },
                 {
                 "label":"",
