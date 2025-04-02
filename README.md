@@ -2,7 +2,7 @@
 Our hyprland rice with suisei wallpaper :)
 
 # Preview:
-![image](https://github.com/user-attachments/assets/11b790cb-f282-4fcc-9f0d-3a3e949c1489)
+https://github.com/user-attachments/assets/11b790cb-f282-4fcc-9f0d-3a3e949c1489
 
 
 # wallpaper setup
