@@ -1,12 +1,10 @@
 
 window.padding.x = 12
 window.padding.y = 12
-window.opacity= 0.99
-import = [
-    "~/.config/alacritty/themes/themes/{theme}.toml"
-]
 # Colors (Alabaster Dark)
 # author tonsky
+
+window.opacity = 0.8
 
 [colors.primary]  
 background = '#0F0F0F'
@@ -44,3 +42,8 @@ white = '#FFFFFF'
 
 [font.normal]
 family = 'JetBrains Mono Nerd Font'
+
+[general]
+import = [
+    "~/.config/alacritty/themes/themes/{theme}.toml"
+]
