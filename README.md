@@ -22,12 +22,22 @@ and uncomment `line 246`
 # Shortcuts
 open default terminal with `super + Q`
 open default file manager with `super + E`
-open wofi menu with `super + A`
+open rofi menu with `super + A`
 lock the screen with `super + L`
 exit apps with `super + C`
 screenshot with `super + Print`
+open minecraft with `super + F`
+toggle floating with `super + V`
+lock screen with `super + L`
+
+# Recommended App if you want
+`prismlauncher`
+`discord`
+`spotify`
+`blockbench`
 
 # Dependecies
+`fish`
 `fastfetch`
 `swww`
 `waypaper`
