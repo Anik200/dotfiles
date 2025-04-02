@@ -28,6 +28,7 @@ exit apps with `super + C`
 screenshot with `super + Print`
 
 # Dependecies
+`fastfetch`
 `swww`
 `waypaper`
 `hyprlock`
