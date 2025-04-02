@@ -1,22 +1,8 @@
-# dotfiles
-Hyperdots for my Hyprland Rice
+# HyprlandDotFiles
+Our hyprland rice with suisei wallpaper :)
 
-# AGS config
-prefer to https://github.com/mewoocat/NixOS and the `ags-overhaul` branch for the ags configs
-
-
-https://github.com/user-attachments/assets/11b790cb-f282-4fcc-9f0d-3a3e949c1489
-
-
-
-
-![image](https://github.com/user-attachments/assets/22469361-ce23-4507-a909-11e8abaf7b98)
-
-![image](https://github.com/user-attachments/assets/be87a4c4-c140-4168-8fc6-4eefd6f78191)
-
-![image](https://github.com/user-attachments/assets/84627e4e-cbea-4875-a0fd-689697b6050c)
-
-
+# Preview:
+![image](https://github.com/user-attachments/assets/11b790cb-f282-4fcc-9f0d-3a3e949c1489)
 
 
 # wallpaper setup
@@ -38,12 +24,14 @@ open default terminal with `super + Q`
 open default file manager with `super + E`
 open wofi menu with `super + A`
 lock the screen with `super + L`
+exit apps with `super + C`
+screenshot with `super + Print`
 
 # Dependecies
 `swww`
 `waypaper`
 `hyprlock`
-`wofi`
+`rofi`
 `brightnessctl`
 `pavucontrol`
 `pamixer`
@@ -53,7 +41,9 @@ lock the screen with `super + L`
 `SwayNotificationCenter`
 `wlogout`
 `pulseaudio`
-`pipewire`
-`wireplumber`
+`pipewire (optional)`
+`wireplumber (optional)`
 
+
+© IZ Corp Sdn. Bhd. 
 
