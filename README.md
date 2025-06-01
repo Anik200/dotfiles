@@ -4,6 +4,8 @@ Our hyprland rice with suisei wallpaper :)
 # Preview:
 ![Screenshot_2025-04-02_16-05-23](https://github.com/user-attachments/assets/9474a705-3c38-4190-aab6-25db8579d89d)
 
+# Supported OS
+only Arch Linux or atleast any Arch-based (such as EndeavorOS, Artix)
 
 # wallpaper setup
 make sure to edit line `45` ![image](https://github.com/user-attachments/assets/3a620a41-d9fa-4ec4-a9b8-07c480be6b81)
