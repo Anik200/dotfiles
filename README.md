@@ -1,6 +1,9 @@
 # HyprlandDotFiles
 Our hyprland rice with suisei wallpaper :)
 
+# Based on
+Anik's dotfiles
+
 # Preview:
 ![Screenshot_2025-04-02_16-05-23](https://github.com/user-attachments/assets/9474a705-3c38-4190-aab6-25db8579d89d)
 
@@ -51,7 +54,7 @@ lock screen with `super + L`
 `waybar`
 `grim`
 `slurp`
-`SwayNotificationCenter`
+`swaync`
 `wlogout`
 `pulseaudio`
 `pipewire (optional)`
