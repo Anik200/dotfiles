@@ -43,6 +43,7 @@ lock screen with `super + L`
 
 # Dependecies
 `fish`
+`alacritty`
 `fastfetch`
 `swww`
 `waypaper`
