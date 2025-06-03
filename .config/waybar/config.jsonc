@@ -382,7 +382,7 @@
         "format-linked": "󰈀 {ifname} (No IP)",
         "format-disconnected": " ",
         "tooltip-format-disconnected": "Disconnected",
-        "on-click": "/usr/local/bin/ags -t ControlPanel",
+        "interface": "wlan0",
         "interval": 2,
     },
 
