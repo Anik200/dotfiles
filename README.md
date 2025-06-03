@@ -58,6 +58,7 @@ lock screen with `super + L`
 `swaync`
 `wlogout`
 `pulseaudio`
+`network-manager-applet`
 `pipewire (optional)`
 `wireplumber (optional)`
 
