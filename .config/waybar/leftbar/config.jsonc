@@ -81,9 +81,11 @@
 
 
 "mpris": {
-	"format": "󰝚 {player_icon}",
+	"format": "󰝚 {player_icon}"
+//"format": "<span color='#1E90D7'> </span> {player_icon} <b>{dynamic}</b>",
 	"rotate": 90,
 	"format-paused": "<span color='#2d2d2e'>󰝚 {status_icon}</span>",
+//"format-paused": "<span color='#254B61'> </span> <span color='#2d2d2e'>{status_icon} <b>{dynamic}</b></span>",
 	"max-length": 6,
 	"player-icons": {
 		"default": "󰏤",
