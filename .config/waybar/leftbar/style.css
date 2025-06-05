@@ -16,6 +16,7 @@
 
 window#waybar {
     background: rgba(21, 21, 21, 0.83); 
+/*background: transparent;*/
   /*  border-radius: 15px; */
  /*  border: 2px solid #124323; */
 /* border: 0px solid #A1BDCE; */
@@ -310,6 +311,8 @@ padding-bottom: 0px;
 #mpris{
 font-size: 16px;
 font-weight: normal;
+	/*background: #000000;*/
+	/*margin: 4px 4px 4px 4px;*/
 background:  rgba(23, 23, 23, 0.5);
 padding-top: 6px;
 padding-bottom: 6px;
