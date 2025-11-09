@@ -1,10 +1,6 @@
 # dotfiles
 Hyperdots for my Hyprland Rice
 
-# AGS config
-prefer to https://github.com/mewoocat/NixOS and the `ags-overhaul` branch for the ags configs
-
-
 https://github.com/user-attachments/assets/11b790cb-f282-4fcc-9f0d-3a3e949c1489
 
 
