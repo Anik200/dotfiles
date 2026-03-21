@@ -52,4 +52,5 @@ lock the screen with `super + L`
 `pipewire`
 `wireplumber`
 
+<iframe style="width:100%;height:auto;min-width:600px;min-height:400px;" src="https://www.star-history.com/?repos=Anik200%2Fdotfiles&type=date&legend=top-left" frameBorder="0"></iframe>
 
